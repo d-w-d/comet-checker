@@ -1,24 +1,34 @@
 @import '../../../styles-variables';
 
-h1 {
-  text-align: center;
-  font-size: 2em;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 1.5em;
-  text-transform: uppercase;
-}
-
 .home2-page-content {
   //Note: #{$footer-height} is special scss syntax = 'the effective height of var $footer-height'
   height: calc(100vh - #{$footer-height});
   width: 100%;
   position: relative;
-  padding-top: 100px;
+  // padding-top: 100px;
   box-sizing: border-box;
   z-index: 0;
   text-align: center;
   color: white;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.vid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
 }

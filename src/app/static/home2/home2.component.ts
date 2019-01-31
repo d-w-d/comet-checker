@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ViewChild, AfterViewInit } from '@angular/core';
 
 import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
 
@@ -8,10 +8,17 @@ import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
   styleUrls: ['./home2.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Home2Component implements OnInit {
+export class Home2Component implements OnInit, AfterViewInit {
   routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
+
+  @ViewChild('video')
+  video: any;
 
   constructor() {}
 
   ngOnInit() {}
+
+  ngAfterViewInit() {
+    //
+  }
 }

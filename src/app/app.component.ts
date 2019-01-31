@@ -26,16 +26,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   isProd = env.production;
   envName = env.envName;
   version = env.versions.app;
-  year = new Date().getFullYear();
   logo = require('../assets/images/logo.png');
-  languages = ['en', 'de', 'sk', 'fr', 'es', 'pt-br', 'zh-cn'];
-  navigation = [
-    //
-    { link: 'about', label: 'cccc.menu.about' },
-    { link: 'features', label: 'cccc.menu.features' },
-    { link: 'examples', label: 'cccc.menu.examples' }
-  ];
-  navigationSideMenu = [...this.navigation, { link: 'settings', label: 'cccc.menu.settings' }];
 
   //Progressive Background Image Loading:
   blurredBackgroundImage = require('../assets/images/blurred_palomar.jpg');
