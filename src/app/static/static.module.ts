@@ -4,6 +4,7 @@ import { SharedModule } from '@app/shared';
 import { StaticRoutingModule } from './static-routing.module';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { Home2Component } from './home2/home2.component';
 import { HttpClient } from '@angular/common/http';
 
 //ngx-markdown setup (following https://github.com/jfcere/ngx-markdown)
@@ -38,6 +39,6 @@ export function markedOptions(): MarkedOptions {
       }
     })
   ],
-  declarations: [AboutComponent, HomeComponent]
+  declarations: [AboutComponent, HomeComponent, Home2Component]
 })
 export class StaticModule {}
