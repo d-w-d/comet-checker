@@ -17,7 +17,6 @@ export class NavService {
     },
     {
       label: 'About',
-      // link: 'about',
       icon: 'info',
       isExpanded: false,
       children: [

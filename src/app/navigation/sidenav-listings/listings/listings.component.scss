@@ -1,26 +1,21 @@
-.example-container {
-  height: 500px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+.fa-icon-wrapper {
+  font-size: 20px;
+  transform: translate(3px, -1px);
 }
-.example-sidenav-content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-.example-sidenav {
-  user-select: none;
-}
+
 a {
   width: 100%;
 }
+
 .menu-button {
   transition: 300ms ease-in-out;
   transform: rotate(0deg);
 }
+
 .menu-button.rotated {
   transform: rotate(180deg);
 }
+
 .submenu {
   max-height: 0px;
   overflow-y: hidden;
@@ -29,6 +24,7 @@ a {
   transform-origin: top;
   padding-left: 30px;
 }
+
 .submenu.expanded {
   max-height: 500px;
   transform: scaleY(1);
