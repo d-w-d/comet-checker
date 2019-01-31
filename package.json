@@ -1,5 +1,5 @@
 {
-  "name": "my-ngx-boilerplate",
+  "name": "cross-catalog-comet-checker",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
@@ -20,7 +20,6 @@
     "format:write": "prettier {src,e2e,cypress}/**/*.{ts,json,md,scss} --write",
     "format:test": "prettier {src,e2e,cypress}/**/*.{ts,json,md,scss} --list-different",
     "analyze": "npm run clean && npm run build:prod -- --stats-json && webpack-bundle-analyzer ./dist/stats.json",
-    "analyze2": "npm run clean && npm run build:prod -- --stats-json && webpack-bundle-analyzer ./dist/stats.json",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "precy:ci": "npm run build:prod -- --deploy-url \"/angular-ngrx-material-starter/\" --base-href \"/angular-ngrx-material-starter\"",
