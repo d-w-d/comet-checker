@@ -22,7 +22,13 @@
                     mat-menu-item
                     [matMenuTriggerFor]="menu.childMenu"
                 >
-                    <mat-icon *ngIf="!!child.icon">{{child.icon}}</mat-icon>
+                    <mat-icon *ngIf="!!child.icon && !child.isFA">{{child.icon}}</mat-icon>
+                    <mat-icon *ngIf="!!child.icon && !!child.isFA">
+                        <fa-icon
+                            [icon]="child.icon"
+                            color="pink"
+                        ></fa-icon>
+                    </mat-icon>
                     <span>{{child.label}}</span>
                 </button>
                 <app-menu-item
@@ -36,7 +42,13 @@
                     mat-menu-item
                     [routerLink]="child.link"
                 >
-                    <mat-icon *ngIf="!!child.icon">{{child.icon}}</mat-icon>
+                    <mat-icon *ngIf="!!child.icon && !child.isFA">{{child.icon}}</mat-icon>
+                    <mat-icon *ngIf="!!child.icon && !!child.isFA">
+                        <fa-icon
+                            [icon]="child.icon"
+                            color="pink"
+                        ></fa-icon>
+                    </mat-icon>
                     <span>{{child.label}}</span>
                 </button>
             </span>

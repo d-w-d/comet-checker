@@ -27,8 +27,8 @@ export enum NavActions {
  */
 export type INav = XOR<
   //
-  { label: string; icon?: string; isExpanded?: boolean; link: string },
-  { label: string; icon?: string; isExpanded?: boolean; children: INav[] }
+  { label: string; icon?: string; isFA?: boolean; isExpanded?: boolean; link: string },
+  { label: string; icon?: string; isFA?: boolean; isExpanded?: boolean; children: INav[] }
 >;
 
 //Aux types to implement XOR logic

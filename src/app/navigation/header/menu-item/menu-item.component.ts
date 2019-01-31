@@ -14,6 +14,7 @@ import { INav, NavActions } from '@app/navigation/navigation.models';
 
 @Component({
   selector: 'app-menu-item',
+  styleUrls: ['./menu-item.component.scss'],
   templateUrl: './menu-item.component.html'
 })
 export class MenuItemComponent implements OnChanges {

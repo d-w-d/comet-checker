@@ -15,20 +15,39 @@ export class NavService {
       link: 'home',
       icon: 'home'
     },
-
     {
       label: 'About',
-      link: 'about',
+      // link: 'about',
       icon: 'info',
-      isExpanded: false
+      isExpanded: false,
+      children: [
+        {
+          label: 'Background',
+          link: 'history',
+          isFA: true,
+          icon: 'landmark'
+        },
+        {
+          label: 'Documentation',
+          link: 'documentation',
+          isFA: true,
+          icon: 'book'
+        },
+        {
+          //
+          label: 'Contact',
+          link: 'contact',
+          icon: 'mail',
+          isExpanded: false
+        }
+      ]
     },
     {
       label: 'Data',
       link: 'data',
-      icon: 'data',
+      icon: 'insert_chart',
       isExpanded: false
-    },
-    { label: 'Contact', link: 'contact', icon: 'contact_mail', isExpanded: false }
+    }
   ];
 
   constructor() {}

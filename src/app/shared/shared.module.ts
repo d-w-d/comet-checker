@@ -52,7 +52,8 @@ import {
   faWindowMaximize,
   faStream,
   faBook,
-  faFeather
+  faFeather,
+  faLandmark
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faMediumM, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
@@ -65,6 +66,7 @@ library.add(
   faRocket,
   faPlayCircle,
   faGithub,
+  faLandmark,
   faMediumM,
   faTwitter,
   faInstagram,
