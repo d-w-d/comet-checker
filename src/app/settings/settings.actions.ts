@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Language, ISettingsAction } from './settings.model';
+import { Language, ISettingsAction, THEMES } from './settings.model';
 
 export enum SettingsActionTypes {
   CHANGE_LANGUAGE = '[Settings] Change Language',
@@ -22,7 +22,7 @@ export class ActionSettingsChangeLanguage implements ISettingsAction {
 export class ActionSettingsChangeTheme implements ISettingsAction {
   readonly type = SettingsActionTypes.CHANGE_THEME;
 
-  constructor(readonly payload: { theme: string }) {}
+  constructor(readonly payload: { theme: THEMES }) {}
 }
 
 export class ActionSettingsChangeAutoNightMode implements ISettingsAction {
