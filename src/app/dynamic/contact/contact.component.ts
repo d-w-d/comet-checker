@@ -81,4 +81,14 @@ export class ContactComponent implements OnInit {
     this.form.clearAsyncValidators();
     // this.store.dispatch(new ActionFormReset());
   }
+
+  isFormSubmittable() {
+    // prettier-ignore
+    // if (
+    //     !!this.form.get('description').hasError('required') ||
+    //     !!this.form.get('email').hasError('required') ||
+    //     !!this.form.get('username').hasError('required')
+    //   ) return false;
+    return true;
+  }
 }

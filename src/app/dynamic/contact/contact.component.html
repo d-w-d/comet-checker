@@ -111,7 +111,7 @@
                                     maxlength="1000"
                                     cdkTextareaAutosize
                                     #autosize="cdkTextareaAutosize"
-                                    cdkAutosizeMinRows="3"
+                                    cdkAutosizeMinRows="10"
                                     cdkAutosizeMaxRows="10"
                                 ></textarea>
                                 <mat-hint align="end">
@@ -163,6 +163,7 @@
                                 mat-raised-button
                                 color="primary"
                                 [ngClass]="routeAnimationsElements"
+                                [disabled]="isFormSubmittable()"
                             >
                                 {{ 'cccc.contact.form.send' | translate }}
                             </button>
@@ -188,6 +189,5 @@
                 </div>
             </div>
         </form>
-
     </div>
 </div>

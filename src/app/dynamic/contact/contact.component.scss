@@ -2,7 +2,7 @@
 
 .contact-page-wrapper {
   //Note: #{$footer-height} is special scss syntax = 'the effective height of var $footer-height'
-  min-height: calc(100vh - #{$footer-height});
+  height: calc(100vh - #{$footer-height});
   width: 100%;
   position: relative;
   padding: 100px 5%;
