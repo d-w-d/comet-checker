@@ -53,7 +53,8 @@ import {
   faStream,
   faBook,
   faFeather,
-  faLandmark
+  faLandmark,
+  faSpaceShuttle
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faMediumM, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
@@ -88,7 +89,8 @@ library.add(
   faWindowMaximize,
   faStream,
   faBook,
-  faFeather
+  faFeather,
+  faSpaceShuttle
 );
 
 import { BigInputComponent } from './big-input/big-input.component';

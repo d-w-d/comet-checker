@@ -6,10 +6,11 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { MenuItemComponent } from './header/menu-item/menu-item.component';
 import { ListingsComponent } from './sidenav-listings/listings/listings.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [SidenavListingsComponent, HeaderComponent, MenuItemComponent, ListingsComponent],
+  declarations: [SidenavListingsComponent, HeaderComponent, MenuItemComponent, ListingsComponent, FooterComponent],
   imports: [CommonModule, SharedModule, RouterModule],
-  exports: [SidenavListingsComponent, HeaderComponent]
+  exports: [SidenavListingsComponent, HeaderComponent, FooterComponent]
 })
 export class NavigationModule {}

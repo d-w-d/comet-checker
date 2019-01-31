@@ -22,7 +22,7 @@ export class NavService {
       children: [
         {
           label: 'Background',
-          link: 'history',
+          link: 'background',
           isFA: true,
           icon: 'landmark'
         },
