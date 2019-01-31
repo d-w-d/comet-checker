@@ -24,7 +24,7 @@
   "cccc.examples.form.error2": "doit être valide",
   "cccc.examples.form.error3": "doit être plus long que",
   "cccc.examples.form.error4": "doit être plus petit que",
-  "cccc.examples.form.placeholder1": "Pseudo",
+  "cccc.examples.form.placeholder1": "Nom",
   "cccc.examples.form.placeholder2": "Mot de passe",
   "cccc.examples.form.placeholder3": "Email",
   "cccc.examples.form.placeholder4": "Description",

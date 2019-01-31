@@ -20,14 +20,8 @@
 @import 'app/static/about/about.component.scss-theme';
 @import 'app/static/home/home.component.scss-theme';
 @import 'app/settings/components/settings-container.component.scss-theme';
-// @import 'app/examples/notifications/components/notifications.component.scss-theme';
-// @import 'app/examples/todos/components/todos-container.component.scss-theme';
-// @import 'app/examples/stock-market/components/stock-market-container.component.scss-theme';
-// @import 'app/examples/theming/parent/parent.component.scss-theme';
-// @import 'app/examples/theming/child/child.component.scss-theme';
-// @import 'app/examples/examples/examples.component.scss-theme';
+@import 'app/dynamic/contact/contact.component.scss-theme';
 
-//
 @import '../node_modules/normalize-scss/sass/_normalize.scss';
 
 @mixin custom-components-theme($theme) {
@@ -35,14 +29,9 @@
   @include cccc-app-component-theme($theme);
   @include cccc-about-component-theme($theme);
   @include cccc-home-component-theme($theme);
+  @include cccc-contact-component-theme($theme);
   @include cccc-settings-component-theme($theme);
   @include cccc-big-input-component-theme($theme);
-  // @include cccc-notifications-component-theme($theme);
-  // @include cccc-todos-container-component-theme($theme);
-  // @include cccc-stock-market-container-component-theme($theme);
-  // @include cccc-parent-component-theme($theme);
-  // @include cccc-child-component-theme($theme);
-  // @include cccc-examples-component-theme($theme);
 }
 
 .default-theme {

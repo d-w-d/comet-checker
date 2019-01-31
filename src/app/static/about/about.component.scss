@@ -1,6 +1,6 @@
 @import '../../../styles-variables';
 
-.about-page-content {
+.about-page-wrapper {
   //Note: #{$footer-height} is special scss syntax = 'the effective height of var $footer-height'
   min-height: calc(100vh - #{$footer-height});
   width: 100%;

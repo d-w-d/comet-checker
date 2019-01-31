@@ -5,6 +5,7 @@ import { SettingsContainerComponent } from './settings';
 import { ZtfComponent } from './oort/ztf/ztf.component';
 import { ContactComponent } from './dynamic/contact/contact.component';
 import { HomeComponent, AboutComponent } from './static';
+import { DataComponent } from './dynamic/data/data.component';
 
 const routes: Routes = [
   {
@@ -28,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'data',
-    component: ZtfComponent
+    component: DataComponent
   },
   {
     path: '**',

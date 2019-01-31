@@ -6,10 +6,10 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { environment } from '@env/environment';
 import { SharedModule } from '@app/shared';
 import { ContactComponent } from './contact/contact.component';
+import { DataComponent } from './data/data.component';
 
-//
 @NgModule({
-  declarations: [ContactComponent],
+  declarations: [ContactComponent, DataComponent],
   imports: [
     SharedModule,
     TranslateModule.forChild({
