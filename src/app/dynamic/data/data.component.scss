@@ -1,0 +1,10 @@
+@import '../../../styles-variables';
+
+.data-page-wrapper {
+  min-height: calc(100vh - #{$footer-height});
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  padding: 100px 5%;
+  width: 100%;
+}
