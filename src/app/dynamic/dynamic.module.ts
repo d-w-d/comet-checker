@@ -1,12 +1,33 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ContactComponent } from './contact/contact.component';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+
+import { environment } from '@env/environment';
 import { SharedModule } from '@app/shared';
+import { ContactComponent } from './contact/contact.component';
 
 //
 @NgModule({
   declarations: [ContactComponent],
-  imports: [CommonModule, SharedModule]
+  imports: [
+    SharedModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      },
+      isolate: true
+    })
+  ]
 })
 export class DynamicModule {}
-// DynamicModule
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(
+    http, //
+    `${environment.i18nPrefix}/assets/i18n/examples/`,
+    '.json'
+  );
+}
