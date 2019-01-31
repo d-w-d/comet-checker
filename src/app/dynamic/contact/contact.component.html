@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col">
                 <h1 class="main-heading">
-                    {{ 'cccc.examples.form.title' | translate }}
+                    {{ 'cccc.contact.form.title' | translate }}
                 </h1>
             </div>
         </div>
@@ -17,7 +17,7 @@
                     <mat-card class="mat-card-theme-override">
                         <!-- <span class="d-flex justify-content-between align-items-baseline">
                             <h2>
-                                {{ 'cccc.examples.form.subtitle1' | translate }}
+                                {{ 'cccc.contact.form.subtitle1' | translate }}
                             </h2>
                         </span> -->
                         <div class="row">
@@ -27,12 +27,12 @@
                             >
                                 <input
                                     matInput
-                                    placeholder="{{ 'cccc.examples.form.placeholder1' | translate }}"
+                                    placeholder="{{ 'cccc.contact.form.placeholder1' | translate }}"
                                     formControlName="username"
                                 >
                                 <mat-error *ngIf="form.get('username').invalid">
-                                    {{ 'cccc.examples.form.placeholder1' | translate }}
-                                {{ 'cccc.examples.form.error1' | translate }}
+                                    {{ 'cccc.contact.form.placeholder1' | translate }}
+                                {{ 'cccc.contact.form.error1' | translate }}
                                 </mat-error>
                             </mat-form-field>
                             <mat-form-field
@@ -41,17 +41,17 @@
                             >
                                 <input
                                     matInput
-                                    placeholder="{{ 'cccc.examples.form.placeholder3' | translate }}"
+                                    placeholder="{{ 'cccc.contact.form.placeholder3' | translate }}"
                                     formControlName="email"
                                     type="email"
                                 >
                                 <mat-error *ngIf="form.get('email').hasError('required')">
-                                    {{ 'cccc.examples.form.placeholder3' | translate }}
-                                {{ 'cccc.examples.form.error1' | translate }}
+                                    {{ 'cccc.contact.form.placeholder3' | translate }}
+                                {{ 'cccc.contact.form.error1' | translate }}
                                 </mat-error>
                                 <mat-error *ngIf="form.get('email').hasError('email')">
-                                    {{ 'cccc.examples.form.placeholder3' | translate }}
-                                {{ 'cccc.examples.form.error2' | translate }}
+                                    {{ 'cccc.contact.form.placeholder3' | translate }}
+                                {{ 'cccc.contact.form.error2' | translate }}
                                 </mat-error>
                             </mat-form-field>
                         </div>
@@ -62,17 +62,17 @@
                         >
                             <input
                                 matInput
-                                placeholder="{{ 'cccc.examples.form.placeholder3' | translate }}"
+                                placeholder="{{ 'cccc.contact.form.placeholder3' | translate }}"
                                 formControlName="email"
                                 type="email"
                             >
                             <mat-error *ngIf="form.get('email').hasError('required')">
-                                {{ 'cccc.examples.form.placeholder3' | translate }}
-                                {{ 'cccc.examples.form.error1' | translate }}
+                                {{ 'cccc.contact.form.placeholder3' | translate }}
+                                {{ 'cccc.contact.form.error1' | translate }}
                             </mat-error>
                             <mat-error *ngIf="form.get('email').hasError('email')">
-                                {{ 'cccc.examples.form.placeholder3' | translate }}
-                                {{ 'cccc.examples.form.error2' | translate }}
+                                {{ 'cccc.contact.form.placeholder3' | translate }}
+                                {{ 'cccc.contact.form.error2' | translate }}
                             </mat-error>
                         </mat-form-field> -->
                         </div>
@@ -85,7 +85,7 @@
                                 matInput
                                 formControlName="birthday"
                                 [matDatepicker]="picker"
-                                placeholder="{{ 'cccc.examples.form.placeholder5' | translate }}"
+                                placeholder="{{ 'cccc.contact.form.placeholder5' | translate }}"
                             >
                             <mat-datepicker-toggle
                                 matSuffix
@@ -93,8 +93,8 @@
                             ></mat-datepicker-toggle>
                             <mat-datepicker #picker></mat-datepicker>
                             <mat-error *ngIf="form.get('birthday').hasError('required')">
-                                {{ 'cccc.examples.form.placeholder5' | translate }}
-                  {{ 'cccc.examples.form.error1' | translate }}
+                                {{ 'cccc.contact.form.placeholder5' | translate }}
+                  {{ 'cccc.contact.form.error1' | translate }}
                             </mat-error>
                         </mat-form-field>
                     </div> -->
@@ -105,7 +105,7 @@
                             >
                                 <textarea
                                     matInput
-                                    placeholder="{{ 'cccc.examples.form.placeholder4' | translate }}"
+                                    placeholder="{{ 'cccc.contact.form.placeholder4' | translate }}"
                                     formControlName="description"
                                     minlength="10"
                                     maxlength="1000"
@@ -118,16 +118,16 @@
                                     {{form.get('description').value?.length}} / 1000
                                 </mat-hint>
                                 <mat-error *ngIf="form.get('description').hasError('required')">
-                                    {{ 'cccc.examples.form.placeholder4' | translate }}
-                                {{ 'cccc.examples.form.error1' | translate }}
+                                    {{ 'cccc.contact.form.placeholder4' | translate }}
+                                {{ 'cccc.contact.form.error1' | translate }}
                                 </mat-error>
                                 <mat-error *ngIf="form.get('description').hasError('minlength')">
-                                    {{ 'cccc.examples.form.placeholder4' | translate }}
-                                {{ 'cccc.examples.form.error3' | translate }} 10
+                                    {{ 'cccc.contact.form.placeholder4' | translate }}
+                                {{ 'cccc.contact.form.error3' | translate }} 10
                                 </mat-error>
                                 <mat-error *ngIf="form.get('description').hasError('maxlength')">
-                                    {{ 'cccc.examples.form.placeholder4' | translate }}
-                                {{ 'cccc.examples.form.error4' | translate }} 1000
+                                    {{ 'cccc.contact.form.placeholder4' | translate }}
+                                {{ 'cccc.contact.form.error4' | translate }} 1000
                                 </mat-error>
                             </mat-form-field>
                         </div>
@@ -137,7 +137,7 @@
                     >
                         <div class="col">
                             <label>
-                                {{ 'cccc.examples.form.text2' | translate }}
+                                {{ 'cccc.contact.form.text2' | translate }}
                             </label>
                             <br>
                             <mat-slider
@@ -155,7 +155,7 @@
                             formControlName="requestGift"
                             [ngClass]="routeAnimationsElements"
                         >
-                            {{ 'cccc.examples.form.text1' | translate }}
+                            {{ 'cccc.contact.form.text1' | translate }}
                         </mat-checkbox>
                     </div> -->
                         <div class="row buttons d-flex justify-content-end pad">
@@ -164,7 +164,7 @@
                                 color="primary"
                                 [ngClass]="routeAnimationsElements"
                             >
-                                {{ 'cccc.examples.form.send' | translate }}
+                                {{ 'cccc.contact.form.send' | translate }}
                             </button>
                             <!-- <button
                             type="button"
@@ -173,7 +173,7 @@
                             [disabled]="form.get('autosave').value"
                             [ngClass]="routeAnimationsElements"
                         >
-                            {{ 'cccc.examples.form.save' | translate }}
+                            {{ 'cccc.contact.form.save' | translate }}
                         </button>
                         <button
                             type="reset"
@@ -181,7 +181,7 @@
                             (click)="reset()"
                             [ngClass]="routeAnimationsElements"
                         >
-                            {{ 'cccc.examples.form.reset' | translate }}
+                            {{ 'cccc.contact.form.reset' | translate }}
                         </button> -->
                         </div>
                     </mat-card>

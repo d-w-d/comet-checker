@@ -69,8 +69,8 @@ export class ContactComponent implements OnInit {
       this.notificationService.info(
         // prettier-ignore
         (this.form.value.requestGift ?
-          this.translate.instant('cccc.examples.form.text4') :
-          this.translate.instant('cccc.examples.form.text5')) + ' : ' + this.translate.instant('cccc.examples.form.text6')
+          this.translate.instant('cccc.contact.form.text4') :
+          this.translate.instant('cccc.contact.form.text5')) + ' : ' + this.translate.instant('cccc.contact.form.text6')
       );
     }
   }

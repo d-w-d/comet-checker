@@ -7,19 +7,23 @@ import { environment } from '@env/environment';
 import { SharedModule } from '@app/shared';
 import { ContactComponent } from './contact/contact.component';
 import { DataComponent } from './data/data.component';
+import { CoreModule } from '@app/core';
 
 @NgModule({
   declarations: [ContactComponent, DataComponent],
   imports: [
     SharedModule,
-    TranslateModule.forChild({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      },
-      isolate: true
-    })
+    CoreModule
+
+    // ,
+    // TranslateModule.forChild({
+    //   loader: {
+    //     provide: TranslateLoader,
+    //     useFactory: HttpLoaderFactory,
+    //     deps: [HttpClient]
+    //   },
+    //   isolate: true
+    // })
   ]
 })
 export class DynamicModule {}
