@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared';
 import { StaticRoutingModule } from './static-routing.module';
 import { AboutComponent } from './about/about.component';
-import { FeaturesComponent } from './features/features.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClient } from '@angular/common/http';
 
@@ -39,6 +38,6 @@ export function markedOptions(): MarkedOptions {
       }
     })
   ],
-  declarations: [AboutComponent, FeaturesComponent, HomeComponent]
+  declarations: [AboutComponent, HomeComponent]
 })
 export class StaticModule {}

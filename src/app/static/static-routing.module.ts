@@ -9,11 +9,6 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent,
     data: { title: 'cccc.menu.about' }
-  },
-  {
-    path: 'features',
-    component: FeaturesComponent,
-    data: { title: 'cccc.menu.features' }
   }
 ];
 

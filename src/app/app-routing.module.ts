@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SettingsContainerComponent } from './settings';
 import { ZtfComponent } from './oort/ztf/ztf.component';
+import { ContactComponent } from './dynamic/contact/contact.component';
 import { HomeComponent, AboutComponent } from './static';
 
 const routes: Routes = [
@@ -22,8 +23,8 @@ const routes: Routes = [
     data: { title: 'cccc.menu.settings' }
   },
   {
-    path: 'examples',
-    loadChildren: 'app/examples/examples.module#ExamplesModule'
+    path: 'contact',
+    component: ContactComponent
   },
   {
     path: 'data',

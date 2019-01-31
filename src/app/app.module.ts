@@ -7,11 +7,13 @@ import { CoreModule } from '@app/core';
 
 import { SettingsModule } from './settings';
 import { StaticModule } from './static';
+// import { DynamicModule } from './dynamic';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationModule } from './navigation/navigation.module';
 import { OortModule } from './oort/oort.module';
+import { DynamicModule } from './dynamic/dynamic.module';
 
 @NgModule({
   imports: [
@@ -24,10 +26,11 @@ import { OortModule } from './oort/oort.module';
     SharedModule,
     NavigationModule,
 
-    // features
+    // Features
     StaticModule,
     SettingsModule,
     OortModule,
+    DynamicModule,
 
     // app
     AppRoutingModule

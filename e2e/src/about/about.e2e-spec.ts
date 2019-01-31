@@ -8,7 +8,7 @@ describe('About Page', () => {
 
   it('should display main heading', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('ANGULAR BOILERPLATE');
+    expect(page.getParagraphText()).toEqual('Comet Cross Checker');
   });
 
   // it('should display "Geting Started" section', () => {
