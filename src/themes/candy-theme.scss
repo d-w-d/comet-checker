@@ -1,0 +1,5 @@
+$brznk-candy-primary: mat-palette($mat-indigo);
+$brznk-candy-accent: mat-palette($mat-pink, A200, A100, A400);
+$brznk-candy-warn: mat-palette($mat-red);
+
+$brznk-candy-theme: mat-light-theme($brznk-candy-primary, $brznk-candy-accent, $brznk-candy-warn);

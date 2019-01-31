@@ -1,0 +1,6 @@
+$brznk-black-primary: mat-palette($mat-grey, 700, 300, 900);
+$brznk-black-secondary: mat-palette($mat-grey, 700, 300, 900);
+$brznk-black-accent: mat-palette($mat-blue-grey, 400);
+$brznk-black-warn: mat-palette($mat-red, 500);
+
+$brznk-black-theme: mat-dark-theme($brznk-black-primary, $brznk-black-accent, $brznk-black-warn);

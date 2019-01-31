@@ -1,0 +1,35 @@
+<!-- <mat-nav-list> -->
+<div *ngFor='let menuItem of _menuItems'>
+    <mat-list-item
+        class="parent"
+        (click)="!!menuItem.link ? onClose() : menuItem.isExpanded = !menuItem.isExpanded"
+    >
+        <a [routerLink]="'/'+menuItem.link">{{menuItem.label}}</a>
+        <mat-icon
+            mat-list-icon
+            *ngIf="!!menuItem?.icon"
+        >
+            {{menuItem?.icon}}
+        </mat-icon>
+        <mat-icon
+            class="menu-button"
+            [ngClass]="{'rotated' : !!menuItem.isExpanded}"
+            *ngIf="!!menuItem?.children && !!menuItem?.children.length"
+            (click)="menuItem.isExpanded = !menuItem.isExpanded"
+        >
+            expand_more
+        </mat-icon>
+    </mat-list-item>
+
+    <mat-nav-list
+        class="submenu"
+        [ngClass]="{'expanded' : !!menuItem.isExpanded}"
+        *ngIf="!!menuItem?.children && !!menuItem?.children.length"
+    >
+        <app-listings
+            [menuItems]="menuItem.children"
+            (closeSidenav)="onClose()"
+        ></app-listings>
+    </mat-nav-list>
+</div>
+<!-- </mat-nav-list> -->
