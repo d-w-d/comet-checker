@@ -1,5 +1,5 @@
-$brznk-primary: mat-palette($mat-indigo, 800, 300, 900);
-$brznk-accent: mat-palette($mat-light-blue);
-$brznk-warn: mat-palette($mat-pink, 600);
+$cccc-primary: mat-palette($mat-indigo, 800, 300, 900);
+$cccc-accent: mat-palette($mat-light-blue);
+$cccc-warn: mat-palette($mat-pink, 600);
 
-$brznk-theme: mat-light-theme($brznk-primary, $brznk-accent, $brznk-warn);
+$cccc-theme: mat-light-theme($cccc-primary, $cccc-accent, $cccc-warn);

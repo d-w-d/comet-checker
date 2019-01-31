@@ -17,7 +17,7 @@ describe('TodosComponent', () => {
   let dispatchSpy: jasmine.Spy;
 
   beforeEach(async () => {
-    component = await createComponent('<brznk-todos></brznk-todos>', {
+    component = await createComponent('<cccc-todos></cccc-todos>', {
       imports: [TestingModule],
       declarations: [TodosContainerComponent],
       providers: [NotificationService],
@@ -70,7 +70,7 @@ describe('TodosComponent', () => {
     component.fixture.detectChanges();
     dispatchSpy.calls.reset();
 
-    component.keyUp(component.getByPlaceholderText('brznk.examples.todos.input'), {
+    component.keyUp(component.getByPlaceholderText('cccc.examples.todos.input'), {
       target: {
         value: 'poke Tomas'
       }
@@ -78,7 +78,7 @@ describe('TodosComponent', () => {
 
     component.click(component.getByLabelText('add todo'));
 
-    expect((component.getByPlaceholderText('brznk.examples.todos.input') as HTMLInputElement).value).toBe('');
+    expect((component.getByPlaceholderText('cccc.examples.todos.input') as HTMLInputElement).value).toBe('');
     expect(dispatchSpy).toHaveBeenCalledTimes(1);
     expect(dispatchSpy.calls.mostRecent().args[0].payload.name).toBe('poke Tomas');
   });
@@ -127,7 +127,7 @@ describe('TodosComponent', () => {
     store.setState(createState({ items: [], filter: 'ALL' }));
     component.fixture.detectChanges();
 
-    component.keyUp(component.getByPlaceholderText('brznk.examples.todos.input'), {
+    component.keyUp(component.getByPlaceholderText('cccc.examples.todos.input'), {
       target: {
         value: 'add'
       }
@@ -140,19 +140,19 @@ describe('TodosComponent', () => {
     store.setState(createState({ items: [], filter: 'ALL' }));
     component.fixture.detectChanges();
 
-    component.keyUp(component.getByPlaceholderText('brznk.examples.todos.input'), {
+    component.keyUp(component.getByPlaceholderText('cccc.examples.todos.input'), {
       target: {
         value: 'hellooooo'
       }
     });
 
-    expect((component.getByPlaceholderText('brznk.examples.todos.input') as HTMLInputElement).value).toBeTruthy();
+    expect((component.getByPlaceholderText('cccc.examples.todos.input') as HTMLInputElement).value).toBeTruthy();
 
-    component.keyUp(component.getByPlaceholderText('brznk.examples.todos.input'), {
+    component.keyUp(component.getByPlaceholderText('cccc.examples.todos.input'), {
       key: 'Esc'
     });
 
-    expect((component.getByPlaceholderText('brznk.examples.todos.input') as HTMLInputElement).value).toBeFalsy();
+    expect((component.getByPlaceholderText('cccc.examples.todos.input') as HTMLInputElement).value).toBeFalsy();
   });
 });
 

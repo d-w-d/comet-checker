@@ -4,14 +4,16 @@ import { SharedModule } from '@app/shared';
 
 @Component({
   selector: 'host-for-test',
+  // prettier-ignore
   template: `
-  <brznk-big-input placeholder="I am going to do..."
-  [value]="newValue"
-  (keyup)="onKeyEvent($event)"
-  (keyup.enter)="onKeyEvent($event)"
-  (keyup.escape)="onKeyEvent($event)">
-</brznk-big-input>
-`
+    <cccc-big-input
+      placeholder="I am going to do..."
+      [value]="newValue"
+      (keyup)="onKeyEvent($event)"
+      (keyup.enter)="onKeyEvent($event)"
+      (keyup.escape)="onKeyEvent($event)"
+    ></cccc-big-input>
+  `
 })
 class HostComponent {
   newValue: string;

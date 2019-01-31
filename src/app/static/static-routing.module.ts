@@ -8,12 +8,12 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
-    data: { title: 'brznk.menu.about' }
+    data: { title: 'cccc.menu.about' }
   },
   {
     path: 'features',
     component: FeaturesComponent,
-    data: { title: 'brznk.menu.features' }
+    data: { title: 'cccc.menu.features' }
   }
 ];
 

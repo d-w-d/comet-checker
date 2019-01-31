@@ -14,11 +14,11 @@ import {
   ActionSettingsChangeStickyHeader,
   ActionSettingsChangeHoverMenu
 } from '../settings.actions';
-import { ISettingsState, IState } from '../settings.model';
+import { ISettingsState, IState, THEMES } from '../settings.model';
 import { selectSettings } from '../settings.selectors';
 
 @Component({
-  selector: 'brznk-settings',
+  selector: 'cccc-settings',
   templateUrl: './settings-container.component.html',
   styleUrls: ['./settings-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -29,11 +29,17 @@ export class SettingsContainerComponent implements OnInit {
 
   themes = [
     //
-    { value: 'DEFAULT-THEME', label: 'blue' },
-    { value: 'LIGHT-THEME', label: 'light' },
-    { value: 'NATURE-THEME', label: 'nature' },
-    { value: 'BLACK-THEME', label: 'dark' },
-    { value: 'CANDY-THEME', label: 'candy' }
+    // { value: 'DEFAULT-THEME', label: 'blue' },
+    // { value: 'LIGHT-THEME', label: 'light' },
+    // { value: 'NATURE-THEME', label: 'nature' },
+    // { value: 'BLACK-THEME', label: 'dark' },
+    // { value: 'CANDY-THEME', label: 'candy' }
+
+    { value: THEMES.DEFAULT_THEME, label: 'blue' },
+    { value: THEMES.LIGHT_THEME, label: 'light' },
+    { value: THEMES.NATURE_THEME, label: 'nature' },
+    { value: THEMES.BLACK_THEME, label: 'dark' },
+    { value: THEMES.CANDY_THEME, label: 'candy' }
   ];
 
   languages = [

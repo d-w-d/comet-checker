@@ -1,9 +1,9 @@
 @import '~@angular/material/theming';
 
-@mixin brznk-stock-market-container-component-theme($theme) {
+@mixin cccc-stock-market-container-component-theme($theme) {
   $warn: map-get($theme, warn);
 
-  brznk-stock-market {
+  cccc-stock-market {
     mat-card {
       .negative {
         color: mat-color($warn);

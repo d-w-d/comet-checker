@@ -31,41 +31,41 @@
 @import '../node_modules/normalize-scss/sass/_normalize.scss';
 
 @mixin custom-components-theme($theme) {
-  @include brznk-styles-reset-theme($theme);
-  @include brznk-app-component-theme($theme);
-  @include brznk-about-component-theme($theme);
-  @include brznk-home-component-theme($theme);
-  @include brznk-settings-component-theme($theme);
-  @include brznk-big-input-component-theme($theme);
-  @include brznk-notifications-component-theme($theme);
-  @include brznk-todos-container-component-theme($theme);
-  @include brznk-stock-market-container-component-theme($theme);
-  @include brznk-parent-component-theme($theme);
-  @include brznk-child-component-theme($theme);
-  @include brznk-examples-component-theme($theme);
+  @include cccc-styles-reset-theme($theme);
+  @include cccc-app-component-theme($theme);
+  @include cccc-about-component-theme($theme);
+  @include cccc-home-component-theme($theme);
+  @include cccc-settings-component-theme($theme);
+  @include cccc-big-input-component-theme($theme);
+  @include cccc-notifications-component-theme($theme);
+  @include cccc-todos-container-component-theme($theme);
+  @include cccc-stock-market-container-component-theme($theme);
+  @include cccc-parent-component-theme($theme);
+  @include cccc-child-component-theme($theme);
+  @include cccc-examples-component-theme($theme);
 }
 
 .default-theme {
-  @include angular-material-theme($brznk-theme);
-  @include custom-components-theme($brznk-theme);
+  @include angular-material-theme($cccc-theme);
+  @include custom-components-theme($cccc-theme);
 }
 
 .light-theme {
-  @include angular-material-theme($brznk-light-theme);
-  @include custom-components-theme($brznk-light-theme);
+  @include angular-material-theme($cccc-light-theme);
+  @include custom-components-theme($cccc-light-theme);
 }
 
 .black-theme {
-  @include angular-material-theme($brznk-black-theme);
-  @include custom-components-theme($brznk-black-theme);
+  @include angular-material-theme($cccc-black-theme);
+  @include custom-components-theme($cccc-black-theme);
 }
 
 .nature-theme {
-  @include angular-material-theme($brznk-nature-theme);
-  @include custom-components-theme($brznk-nature-theme);
+  @include angular-material-theme($cccc-nature-theme);
+  @include custom-components-theme($cccc-nature-theme);
 }
 
 .candy-theme {
-  @include angular-material-theme($brznk-candy-theme);
-  @include custom-components-theme($brznk-candy-theme);
+  @include angular-material-theme($cccc-candy-theme);
+  @include custom-components-theme($cccc-candy-theme);
 }

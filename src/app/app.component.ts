@@ -17,7 +17,7 @@ import {
 } from './settings';
 
 @Component({
-  selector: 'brznk-root',
+  selector: 'cccc-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [routeAnimations]
@@ -31,11 +31,11 @@ export class AppComponent implements OnInit, AfterViewInit {
   languages = ['en', 'de', 'sk', 'fr', 'es', 'pt-br', 'zh-cn'];
   navigation = [
     //
-    { link: 'about', label: 'brznk.menu.about' },
-    { link: 'features', label: 'brznk.menu.features' },
-    { link: 'examples', label: 'brznk.menu.examples' }
+    { link: 'about', label: 'cccc.menu.about' },
+    { link: 'features', label: 'cccc.menu.features' },
+    { link: 'examples', label: 'cccc.menu.examples' }
   ];
-  navigationSideMenu = [...this.navigation, { link: 'settings', label: 'brznk.menu.settings' }];
+  navigationSideMenu = [...this.navigation, { link: 'settings', label: 'cccc.menu.settings' }];
 
   //Progressive Background Image Loading:
   blurredBackgroundImage = require('../assets/images/blurred_palomar.jpg');

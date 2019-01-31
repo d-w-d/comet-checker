@@ -20,7 +20,7 @@ import { AppComponent as app } from '../../app.component';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({
-  selector: 'brznk-header',
+  selector: 'cccc-header',
   templateUrl: 'header.component.html',
   encapsulation: ViewEncapsulation.None
 })

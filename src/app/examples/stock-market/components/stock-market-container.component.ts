@@ -11,7 +11,7 @@ import { IStockMarketState } from '../stock-market.model';
 import { IState } from '../../examples.state';
 
 @Component({
-  selector: 'brznk-stock-market',
+  selector: 'cccc-stock-market',
   templateUrl: './stock-market-container.component.html',
   styleUrls: ['./stock-market-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

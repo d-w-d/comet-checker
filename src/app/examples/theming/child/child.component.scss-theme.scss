@@ -1,9 +1,9 @@
 @import '~@angular/material/theming';
 
-@mixin brznk-child-component-theme($theme) {
+@mixin cccc-child-component-theme($theme) {
   $warn: map-get($theme, warn);
 
-  brznk-child {
+  cccc-child {
     > div {
       border-color: mat-color($warn);
 

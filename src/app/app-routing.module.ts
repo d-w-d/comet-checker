@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     path: 'settings',
     component: SettingsContainerComponent,
-    data: { title: 'brznk.menu.settings' }
+    data: { title: 'cccc.menu.settings' }
   },
   {
     path: 'examples',

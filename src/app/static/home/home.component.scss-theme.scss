@@ -1,12 +1,12 @@
 @import '~@angular/material/theming';
 
-@mixin brznk-home-component-theme($theme) {
+@mixin cccc-home-component-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
 
-  brznk-home {
+  cccc-home {
     //
 
     h1 {

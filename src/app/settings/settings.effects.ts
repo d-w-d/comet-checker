@@ -16,7 +16,7 @@ import { IState } from './settings.model';
 
 export const SETTINGS_KEY = 'SETTINGS';
 
-const INIT = of('brznk-init-effect-trigger');
+const INIT = of('cccc-init-effect-trigger');
 
 @Injectable()
 export class SettingsEffects {

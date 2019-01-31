@@ -13,7 +13,7 @@ import { ITodo, TodosFilter } from '../todos.model';
 import { IState } from '../../examples.state';
 
 @Component({
-  selector: 'brznk-todos',
+  selector: 'cccc-todos',
   templateUrl: './todos-container.component.html',
   styleUrls: ['./todos-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -51,16 +51,16 @@ export class TodosContainerComponent implements OnInit {
 
   onAddTodo() {
     this.store.dispatch(new ActionTodosAdd({ name: this.newTodo }));
-    const addedMessage = this.translateService.instant('brznk.examples.todos.added.notification', { name: this.newTodo });
+    const addedMessage = this.translateService.instant('cccc.examples.todos.added.notification', { name: this.newTodo });
     this.notificationService.info(addedMessage);
     this.newTodo = '';
   }
 
   onToggleTodo(todo: ITodo) {
     this.store.dispatch(new ActionTodosToggle({ id: todo.id }));
-    const newStatus = this.translateService.instant(`brznk.examples.todos.filter.${todo.done ? 'active' : 'done'}`);
-    const undo = this.translateService.instant('brznk.examples.todos.undo');
-    const toggledMessage = this.translateService.instant('brznk.examples.todos.toggle.notification', { name: todo.name });
+    const newStatus = this.translateService.instant(`cccc.examples.todos.filter.${todo.done ? 'active' : 'done'}`);
+    const undo = this.translateService.instant('cccc.examples.todos.undo');
+    const toggledMessage = this.translateService.instant('cccc.examples.todos.toggle.notification', { name: todo.name });
 
     this.snackBar
       .open(`${toggledMessage} ${newStatus}`, undo, {
@@ -74,14 +74,14 @@ export class TodosContainerComponent implements OnInit {
 
   onRemoveDoneTodos() {
     this.store.dispatch(new ActionTodosRemoveDone());
-    const removedMessage = this.translateService.instant('brznk.examples.todos.remove.notification');
+    const removedMessage = this.translateService.instant('cccc.examples.todos.remove.notification');
     this.notificationService.info(removedMessage);
   }
 
   onFilterTodos(filter: TodosFilter) {
     this.store.dispatch(new ActionTodosFilter({ filter }));
-    const filterToMessage = this.translateService.instant('brznk.examples.todos.filter.notification');
-    const filterMessage = this.translateService.instant(`brznk.examples.todos.filter.${filter.toLowerCase()}`);
+    const filterToMessage = this.translateService.instant('cccc.examples.todos.filter.notification');
+    const filterMessage = this.translateService.instant(`cccc.examples.todos.filter.${filter.toLowerCase()}`);
     this.notificationService.info(`${filterToMessage} ${filterMessage}`);
   }
 }

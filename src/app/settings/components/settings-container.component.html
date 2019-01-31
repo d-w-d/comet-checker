@@ -3,7 +3,7 @@
         <!-- <div class="row">
             <div class="col-sm-12">
                 <h1>
-                    {{ 'brznk.settings.title' | translate }}
+                    {{ 'cccc.settings.title' | translate }}
                 </h1>
             </div>
         </div>
@@ -15,7 +15,7 @@
                     [ngClass]="routeAnimationsElements"
                 >
                     <h2>
-                        {{ 'brznk.settings.general.title' | translate }}
+                        {{ 'cccc.settings.general.title' | translate }}
                     </h2>
                     <div class="icon-form-field">
                         <mat-icon color="accent">
@@ -26,7 +26,7 @@
                         </mat-icon>
                         <mat-form-field>
                             <mat-select
-                                [placeholder]="'brznk.settings.general.placeholder' | translate"
+                                [placeholder]="'cccc.settings.general.placeholder' | translate"
                                 [ngModel]="settings.language"
                                 (selectionChange)="onLanguageSelect($event)"
                                 name="language"
@@ -35,7 +35,7 @@
                                     *ngFor="let l of languages"
                                     [value]="l.value"
                                 >
-                                    {{ 'brznk.settings.general.language.' + l.label | translate }}
+                                    {{ 'cccc.settings.general.language.' + l.label | translate }}
                                 </mat-option>
                             </mat-select>
                         </mat-form-field>
@@ -48,7 +48,7 @@
                             ></fa-icon>
                         </mat-icon>
                         <mat-placeholder>
-                            {{ 'brznk.settings.themes.sticky-header' | translate }}
+                            {{ 'cccc.settings.themes.sticky-header' | translate }}
                         </mat-placeholder>
                         <mat-slide-toggle
                             [checked]="settings.stickyHeader"
@@ -62,7 +62,7 @@
                     [ngClass]="routeAnimationsElements"
                 >
                     <h2>
-                        {{ 'brznk.settings.themes.title' | translate }}
+                        {{ 'cccc.settings.themes.title' | translate }}
                     </h2>
                     <div class="icon-form-field">
                         <mat-icon color="accent">
@@ -73,7 +73,7 @@
                         </mat-icon>
                         <mat-form-field>
                             <mat-select
-                                [placeholder]="'brznk.settings.themes.placeholder' | translate"
+                                [placeholder]="'cccc.settings.themes.placeholder' | translate"
                                 [ngModel]="settings.theme"
                                 (selectionChange)="onThemeSelect($event)"
                                 name="themes"
@@ -82,7 +82,7 @@
                                     *ngFor="let t of themes"
                                     [value]="t.value"
                                 >
-                                    {{ 'brznk.settings.themes.' + t.label | translate }}
+                                    {{ 'cccc.settings.themes.' + t.label | translate }}
                                 </mat-option>
                             </mat-select>
                         </mat-form-field>
@@ -95,7 +95,7 @@
                             ></fa-icon>
                         </mat-icon>
                         <mat-placeholder>
-                            {{ 'brznk.settings.themes.night-mode' | translate }}
+                            {{ 'cccc.settings.themes.night-mode' | translate }}
                         </mat-placeholder>
                         <mat-slide-toggle
                             [checked]="settings.autoNightMode"
@@ -111,7 +111,7 @@
                     [ngClass]="routeAnimationsElements"
                 >
                     <h2>
-                        {{ 'brznk.settings.animations.title' | translate }}
+                        {{ 'cccc.settings.animations.title' | translate }}
                     </h2>
                     <div class="icon-form-field">
                         <mat-icon color="accent">
@@ -120,7 +120,7 @@
                             </mat-icon>
                         </mat-icon>
                         <mat-placeholder>
-                            {{ 'brznk.settings.animations.page' | translate }}
+                            {{ 'cccc.settings.animations.page' | translate }}
                         </mat-placeholder>
                         <mat-slide-toggle
                             matTooltip="Sorry, this feature is disabled in IE, EDGE and Safari"
@@ -144,7 +144,7 @@
                             ></fa-icon>
                         </mat-icon>
                         <mat-placeholder>
-                            {{ 'brznk.settings.animations.elements' | translate }}
+                            {{ 'cccc.settings.animations.elements' | translate }}
                         </mat-placeholder>
                         <mat-slide-toggle
                             [checked]="settings.elementsAnimations"
@@ -158,7 +158,7 @@
                     [ngClass]="routeAnimationsElements"
                 >
                     <h2>
-                        {{ 'brznk.settings.navigation.title' | translate }}
+                        {{ 'cccc.settings.navigation.title' | translate }}
                     </h2>
                     <div class="icon-form-field">
                         <mat-icon color="accent">
@@ -168,7 +168,7 @@
                             ></fa-icon>
                         </mat-icon>
                         <mat-placeholder>
-                            {{ 'brznk.settings.hovermenu' | translate }}
+                            {{ 'cccc.settings.hovermenu' | translate }}
                         </mat-placeholder>
                         <mat-slide-toggle
                             [checked]="settings.isMenuHoveringEnabled"

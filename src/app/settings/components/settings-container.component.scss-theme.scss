@@ -1,12 +1,12 @@
 @import '~@angular/material/theming';
 
-@mixin brznk-settings-component-theme($theme) {
+@mixin cccc-settings-component-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
 
-  brznk-settings {
+  cccc-settings {
     .settings-wrapper {
       background-color: rgba(mat-color($primary, lighter), 0.5);
     }

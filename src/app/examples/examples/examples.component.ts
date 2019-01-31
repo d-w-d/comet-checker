@@ -11,7 +11,7 @@ import { IState as BaseExamplesState } from '../examples.state';
 interface IState extends BaseSettingsState, BaseExamplesState {}
 
 @Component({
-  selector: 'brznk-examples',
+  selector: 'cccc-examples',
   templateUrl: './examples.component.html',
   styleUrls: ['./examples.component.scss'],
   animations: [routeAnimations],
@@ -22,13 +22,13 @@ export class ExamplesComponent implements OnInit {
 
   examples = [
     //
-    { link: 'todos', label: 'brznk.examples.menu.todos' },
-    { link: 'stock-market', label: 'brznk.examples.menu.stocks' },
-    { link: 'theming', label: 'brznk.examples.menu.theming' },
-    { link: 'crud', label: 'brznk.examples.menu.crud' },
-    { link: 'form', label: 'brznk.examples.menu.form' },
-    { link: 'notifications', label: 'brznk.examples.menu.notifications' },
-    { link: 'authenticated', label: 'brznk.examples.menu.auth', auth: true }
+    { link: 'todos', label: 'cccc.examples.menu.todos' },
+    { link: 'stock-market', label: 'cccc.examples.menu.stocks' },
+    { link: 'theming', label: 'cccc.examples.menu.theming' },
+    { link: 'crud', label: 'cccc.examples.menu.crud' },
+    { link: 'form', label: 'cccc.examples.menu.form' },
+    { link: 'notifications', label: 'cccc.examples.menu.notifications' },
+    { link: 'authenticated', label: 'cccc.examples.menu.auth', auth: true }
   ];
 
   constructor(private store: Store<IState>) {}

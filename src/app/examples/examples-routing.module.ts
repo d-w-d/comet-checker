@@ -25,17 +25,17 @@ const routes: Routes = [
       {
         path: 'todos',
         component: TodosContainerComponent,
-        data: { title: 'brznk.examples.menu.todos' }
+        data: { title: 'cccc.examples.menu.todos' }
       },
       {
         path: 'stock-market',
         component: StockMarketContainerComponent,
-        data: { title: 'brznk.examples.menu.stocks' }
+        data: { title: 'cccc.examples.menu.stocks' }
       },
       {
         path: 'theming',
         component: ParentComponent,
-        data: { title: 'brznk.examples.menu.theming' }
+        data: { title: 'cccc.examples.menu.theming' }
       },
       {
         path: 'crud',
@@ -45,23 +45,23 @@ const routes: Routes = [
       {
         path: 'crud/:id',
         component: CrudComponent,
-        data: { title: 'brznk.examples.menu.crud' }
+        data: { title: 'cccc.examples.menu.crud' }
       },
       {
         path: 'form',
         component: FormComponent,
-        data: { title: 'brznk.examples.menu.form' }
+        data: { title: 'cccc.examples.menu.form' }
       },
       {
         path: 'notifications',
         component: NotificationsComponent,
-        data: { title: 'brznk.examples.menu.notifications' }
+        data: { title: 'cccc.examples.menu.notifications' }
       },
       {
         path: 'authenticated',
         component: AuthenticatedComponent,
         canActivate: [AuthGuardService],
-        data: { title: 'brznk.examples.menu.auth' }
+        data: { title: 'cccc.examples.menu.auth' }
       }
     ]
   }

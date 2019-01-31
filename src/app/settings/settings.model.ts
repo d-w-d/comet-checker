@@ -4,6 +4,14 @@ export const NIGHT_MODE_THEME = 'BLACK-THEME';
 
 export type Language = 'en' | 'sk' | 'de' | 'fr' | 'es' | 'pt-br';
 
+export enum THEMES {
+  'DEFAULT_THEME' = 'DEFAULT-THEME',
+  'LIGHT_THEME' = 'LIGHT-THEME',
+  'NATURE_THEME' = 'NATURE-THEME',
+  'BLACK_THEME' = 'BLACK-THEME',
+  'CANDY_THEME' = 'CANDY-THEME'
+}
+
 export interface ISettingsState {
   language: string;
   theme: string;

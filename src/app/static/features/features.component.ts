@@ -5,7 +5,7 @@ import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
 import { IFeature, features } from './features.data';
 
 @Component({
-  selector: 'brznk-features',
+  selector: 'cccc-features',
   templateUrl: './features.component.html',
   styleUrls: ['./features.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

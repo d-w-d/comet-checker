@@ -1,6 +1,6 @@
-$brznk-black-primary: mat-palette($mat-grey, 700, 300, 900);
-$brznk-black-secondary: mat-palette($mat-grey, 700, 300, 900);
-$brznk-black-accent: mat-palette($mat-blue-grey, 400);
-$brznk-black-warn: mat-palette($mat-red, 500);
+$cccc-black-primary: mat-palette($mat-grey, 700, 300, 900);
+$cccc-black-secondary: mat-palette($mat-grey, 700, 300, 900);
+$cccc-black-accent: mat-palette($mat-blue-grey, 400);
+$cccc-black-warn: mat-palette($mat-red, 500);
 
-$brznk-black-theme: mat-dark-theme($brznk-black-primary, $brznk-black-accent, $brznk-black-warn);
+$cccc-black-theme: mat-dark-theme($cccc-black-primary, $cccc-black-accent, $cccc-black-warn);

@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "brznk",
+      "prefix": "cccc",
       "schematics": {
         "@schematics/angular:component": {
           "changeDetection": "OnPush"
@@ -34,10 +34,7 @@
                 "output": "/assets"
               }
             ],
-            "styles": [
-              { "input": "src/styles-app-loading.scss" },
-              { "input": "src/styles.scss" }
-            ],
+            "styles": [{ "input": "src/styles-app-loading.scss" }, { "input": "src/styles.scss" }],
             "scripts": []
           },
           "configurations": {
@@ -148,12 +145,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -173,9 +166,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }

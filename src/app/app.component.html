@@ -33,14 +33,14 @@
                         class="branding spacer center d-none d-sm-inline d-md-none"
                     >
                         <img [src]="logo">
-                        {{ 'brznk.title.short' | translate }}
+                        {{ 'cccc.title.short' | translate }}
                     </span>
                     <span
                         routerLink
                         class="branding spacer d-none d-md-inline"
                     >
                         <img [src]="logo">
-                        {{ 'brznk.title.long' | translate    }}
+                        {{ 'cccc.title.long' | translate    }}
                     </span>
                     <span class="d-none d-md-inline">
                         <!-- <button
@@ -52,7 +52,7 @@
                       >
                           {{item.label | translate}}
                       </button> -->
-                        <brznk-header [isHoverMenuEnabled]="hoverMenu$ | async"></brznk-header>
+                        <cccc-header [isHoverMenuEnabled]="hoverMenu$ | async"></cccc-header>
                     </span>
 
                     <!-- <button
@@ -62,7 +62,7 @@
                       *ngIf="!(isAuthenticated$ | async)"
                       (click)="onLoginClick()"
                     >
-                      {{ 'brznk.menu.login' | translate }}
+                      {{ 'cccc.menu.login' | translate }}
                     </button> -->
 
                     <!-- <button
@@ -80,7 +80,7 @@
                             <mat-icon>
                                 <fa-icon icon="power-off"></fa-icon>
                             </mat-icon>
-                            <span>{{ 'brznk.menu.logout' | translate }}</span>
+                            <span>{{ 'cccc.menu.logout' | translate }}</span>
                         </button>
                     </mat-menu>
 
@@ -178,7 +178,7 @@
 
                             <br class="d-block d-sm-none">
                             <a
-                                [matTooltip]="'brznk.footer.changelog' | translate"
+                                [matTooltip]="'cccc.footer.changelog' | translate"
                                 matTooltipPosition="before"
                                 href="https://github.com/tomastrajan/angular-ngrx-material-starter/blob/master/CHANGELOG.md"
                             >

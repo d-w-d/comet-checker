@@ -32,16 +32,17 @@ describe('BigInputActionComponent', () => {
     TestBed.configureTestingModule({
       declarations: [HostComponent],
       imports: [SharedModule]
-    }));
+    })
+  );
 
   it('should be created', () => {
-    const template = '<brznk-big-input-action></brznk-big-input-action>';
+    const template = '<cccc-big-input-action></cccc-big-input-action>';
     fixture = createHostComponent(template);
     expect(component).toBeTruthy();
   });
 
   it('should initially not be disabled and show no icon or label', () => {
-    const template = '<brznk-big-input-action></brznk-big-input-action>';
+    const template = '<cccc-big-input-action></cccc-big-input-action>';
     fixture = createHostComponent(template);
     expect(getButton().nativeElement.disabled).toBeFalsy();
     expect(getIcon()).toBeNull();
@@ -49,13 +50,13 @@ describe('BigInputActionComponent', () => {
   });
 
   it('should disable button if disabled property is set', () => {
-    const template = '<brznk-big-input-action [disabled]="true"></brznk-big-input-action>';
+    const template = '<cccc-big-input-action [disabled]="true"></cccc-big-input-action>';
     fixture = createHostComponent(template);
     expect(getButton().nativeElement.disabled).toBeTruthy();
   });
 
   it('should display icon if fontSet and fontIcon properties are set', () => {
-    const template = `<brznk-big-input-action fontSet="fas" fontIcon="fa-trash"></brznk-big-input-action>`;
+    const template = `<cccc-big-input-action fontSet="fas" fontIcon="fa-trash"></cccc-big-input-action>`;
     fixture = createHostComponent(template);
     expect(getIcon()).toBeTruthy();
     expect(getIcon().nativeElement.classList.contains('fa-trash')).toBeTruthy();
@@ -63,14 +64,14 @@ describe('BigInputActionComponent', () => {
   });
 
   it('should display label with provided text when label property is set', () => {
-    const template = `<brznk-big-input-action label="delete"></brznk-big-input-action>`;
+    const template = `<cccc-big-input-action label="delete"></cccc-big-input-action>`;
     fixture = createHostComponent(template);
     expect(getLabel()).toBeTruthy();
     expect(getLabel().nativeElement.textContent).toBe('delete');
   });
 
   it('should emit action event on button click', () => {
-    const template = `<brznk-big-input-action (action)="actionHandler()"></brznk-big-input-action>`;
+    const template = `<cccc-big-input-action (action)="actionHandler()"></cccc-big-input-action>`;
     fixture = createHostComponent(template);
     spyOn(component, 'actionHandler').and.callThrough();
     getButton().triggerEventHandler('click', {});

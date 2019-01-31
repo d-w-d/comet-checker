@@ -1,5 +1,5 @@
-$brznk-light-primary: mat-palette($mat-grey, 200, 500, 300);
-$brznk-light-accent: mat-palette($mat-brown, 200);
-$brznk-light-warn: mat-palette($mat-deep-orange, 200);
+$cccc-light-primary: mat-palette($mat-grey, 200, 500, 300);
+$cccc-light-accent: mat-palette($mat-brown, 200);
+$cccc-light-warn: mat-palette($mat-deep-orange, 200);
 
-$brznk-light-theme: mat-light-theme($brznk-light-primary, $brznk-light-accent, $brznk-light-warn);
+$cccc-light-theme: mat-light-theme($cccc-light-primary, $cccc-light-accent, $cccc-light-warn);

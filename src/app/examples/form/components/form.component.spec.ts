@@ -17,7 +17,7 @@ describe('FormComponent', () => {
   let dispatchSpy: jasmine.Spy;
 
   beforeEach(async () => {
-    component = await createComponent<FormComponent>('<brznk-form></brznk-form>', {
+    component = await createComponent<FormComponent>('<cccc-form></cccc-form>', {
       declarations: [FormComponent],
       imports: [TestingModule],
       providers: [NotificationService],
@@ -32,33 +32,33 @@ describe('FormComponent', () => {
   });
 
   it('should submit when form is valid', async () => {
-    component.input(component.getByLabelText('brznk.examples.form.placeholder1'), {
+    component.input(component.getByLabelText('cccc.examples.form.placeholder1'), {
       target: {
         value: '@tim_deschryver'
       }
     });
-    component.input(component.getByLabelText('brznk.examples.form.placeholder2'), {
+    component.input(component.getByLabelText('cccc.examples.form.placeholder2'), {
       target: {
         value: 'mysuperawesomeandsecurepassword'
       }
     });
-    component.input(component.getByLabelText('brznk.examples.form.placeholder3'), {
+    component.input(component.getByLabelText('cccc.examples.form.placeholder3'), {
       target: {
         value: 'foo@bar.baz'
       }
     });
-    component.input(component.getByLabelText('brznk.examples.form.placeholder5'), {
+    component.input(component.getByLabelText('cccc.examples.form.placeholder5'), {
       target: {
         value: '1991-12-31'
       }
     });
-    component.input(component.getByLabelText('brznk.examples.form.placeholder4'), {
+    component.input(component.getByLabelText('cccc.examples.form.placeholder4'), {
       target: {
         value: 'no description needed here'
       }
     });
-    component.click(component.getByLabelText('brznk.examples.form.text1'));
-    component.click(component.getByText('brznk.examples.form.send'));
+    component.click(component.getByLabelText('cccc.examples.form.text1'));
+    component.click(component.getByText('cccc.examples.form.send'));
     const { type, payload } = new ActionFormUpdate({
       form: {
         autosave: false,

@@ -3,7 +3,7 @@ import { ZtfDataService } from '../ztf-data.service';
 import { IZTFData } from '../ztf-data.model';
 
 @Component({
-  selector: 'brznk-ztf',
+  selector: 'cccc-ztf',
   templateUrl: './ztf.component.html',
   styleUrls: ['./ztf.component.css']
   //   changeDetection: ChangeDetectionStrategy.OnPush

@@ -1,9 +1,9 @@
-import { ISettingsState, NIGHT_MODE_THEME } from './settings.model';
+import { ISettingsState, NIGHT_MODE_THEME, THEMES } from './settings.model';
 import { SettingsActions, SettingsActionTypes } from './settings.actions';
 
 export const initialState: ISettingsState = {
   language: 'en',
-  theme: 'DARK-THEME',
+  theme: THEMES.BLACK_THEME,
   autoNightMode: false,
   nightTheme: NIGHT_MODE_THEME,
   stickyHeader: true,
