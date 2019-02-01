@@ -789,7 +789,17 @@ var CoreModule = /** @class */ (function () {
                 })
             ],
             declarations: [],
-            providers: [_notifications_notification_service__WEBPACK_IMPORTED_MODULE_19__["NotificationService"], _local_storage_local_storage_service__WEBPACK_IMPORTED_MODULE_11__["LocalStorageService"], _auth_auth_guard_service__WEBPACK_IMPORTED_MODULE_13__["AuthGuardService"], _animations_animations_service__WEBPACK_IMPORTED_MODULE_14__["AnimationsService"], _http_interceptors__WEBPACK_IMPORTED_MODULE_10__["httpInterceptorProviders"], _title_title_service__WEBPACK_IMPORTED_MODULE_15__["TitleService"], { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"], useClass: _error_handler_app_error_handler_service__WEBPACK_IMPORTED_MODULE_17__["AppErrorHandler"] }, { provide: _ngrx_router_store__WEBPACK_IMPORTED_MODULE_8__["RouterStateSerializer"], useClass: _router_custom_serializer__WEBPACK_IMPORTED_MODULE_18__["CustomSerializer"] }],
+            providers: [
+                //
+                _notifications_notification_service__WEBPACK_IMPORTED_MODULE_19__["NotificationService"],
+                _local_storage_local_storage_service__WEBPACK_IMPORTED_MODULE_11__["LocalStorageService"],
+                _auth_auth_guard_service__WEBPACK_IMPORTED_MODULE_13__["AuthGuardService"],
+                _animations_animations_service__WEBPACK_IMPORTED_MODULE_14__["AnimationsService"],
+                _http_interceptors__WEBPACK_IMPORTED_MODULE_10__["httpInterceptorProviders"],
+                _title_title_service__WEBPACK_IMPORTED_MODULE_15__["TitleService"],
+                { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"], useClass: _error_handler_app_error_handler_service__WEBPACK_IMPORTED_MODULE_17__["AppErrorHandler"] },
+                { provide: _ngrx_router_store__WEBPACK_IMPORTED_MODULE_8__["RouterStateSerializer"], useClass: _router_custom_serializer__WEBPACK_IMPORTED_MODULE_18__["CustomSerializer"] }
+            ],
             exports: [_ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateModule"]]
         }),
         __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()),
@@ -4064,7 +4074,7 @@ var environment = {
     envName: 'DEV',
     production: false,
     test: false,
-    i18nPrefix: '',
+    i18nPrefix: '/comet-checker',
     versions: {
         app: _package_json__WEBPACK_IMPORTED_MODULE_0__["version"],
         angular: _package_json__WEBPACK_IMPORTED_MODULE_0__["dependencies"]['@angular/core'],
