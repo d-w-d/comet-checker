@@ -11,7 +11,7 @@ import { LocalStorageService, AnimationsService, TitleService } from '@app/core'
 
 import { SettingsActionTypes, SettingsActions, ActionSettingsChangeHour } from './settings.actions';
 //
-import { selectEffectiveTheme, selectSettings as selectSettingsState } from './settings.selectors';
+import { selectEffectiveTheme, selectSettings } from './settings.selectors';
 import { IState } from './settings.model';
 
 export const SETTINGS_KEY = 'SETTINGS';
@@ -52,7 +52,7 @@ export class SettingsEffects {
       SettingsActionTypes.CHANGE_THEME,
       SettingsActionTypes.CHANGE_HOVER_MENU
     ),
-    withLatestFrom(this.store.pipe(select(selectSettingsState))),
+    withLatestFrom(this.store.pipe(select(selectSettings))),
     tap(([action, settings]) => this.localStorageService.setItem(SETTINGS_KEY, settings))
   );
 
@@ -62,7 +62,7 @@ export class SettingsEffects {
     INIT,
     this.actions$.pipe(ofType(SettingsActionTypes.CHANGE_ANIMATIONS_ELEMENTS, SettingsActionTypes.CHANGE_ANIMATIONS_PAGE))
   ).pipe(
-    withLatestFrom(this.store.pipe(select(selectSettingsState))),
+    withLatestFrom(this.store.pipe(select(selectSettings))),
     tap(([action, settings]) => this.animationsService.updateRouteAnimationType(settings.pageAnimations, settings.elementsAnimations))
   );
 
@@ -81,7 +81,7 @@ export class SettingsEffects {
 
   @Effect({ dispatch: false })
   setTranslateServiceLanguage = this.store.pipe(
-    select(selectSettingsState),
+    select(selectSettings),
     map(settings => settings.language),
     distinctUntilChanged(),
     tap(language => this.translateService.use(language))
