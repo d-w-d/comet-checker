@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "comet-ccc": {
-      "root": "comet-checker",
+      "root": "",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "cccc",
