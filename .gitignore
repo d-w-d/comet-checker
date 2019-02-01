@@ -2,6 +2,7 @@
 
 /_sources
 /dwd_notes
+dwd_notes.md
 
 # compiled output
 # /dist
@@ -23,7 +24,7 @@ yarn.lock
 *.sublime-workspace
 
 # IDE - VSCode
-.vscode/*
+# .vscode/*
 # !.vscode/settings.json
 # !.vscode/tasks.json
 # !.vscode/launch.json

@@ -1,0 +1,15 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "[jsonc]": {
+      "editor.formatOnSave": false
+  },
+  "tslint.configFile": "tslint.json",
+  "tslint.enable": true,
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 120,
+  "prettier.singleQuote": true,
+  "files.associations": {
+      "*.html": "html"
+  }
+}
