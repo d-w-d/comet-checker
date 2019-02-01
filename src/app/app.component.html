@@ -79,15 +79,22 @@
                     *ngIf="isPalomarImageLoaded"
                     class="background2"
                 >
-                    <img [src]=[palomarImageSource]>
+                    <img
+                        [src]=[palomarImageSource]
+                        width="100%"
+                        height="100%"
+                    >
                 </div>
+
                 <div
                     class="content"
                     [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig.path"
                 >
                     <router-outlet #o="outlet"></router-outlet>
                 </div>
-                <cccc-footer></cccc-footer>
+                <div class="footer-wrapper">
+                    <cccc-footer></cccc-footer>
+                </div>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>

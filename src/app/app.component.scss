@@ -76,22 +76,43 @@ mat-sidenav-container {
     bottom: 0;
     background-color: pink;
     overflow: scroll;
+    z-index: 0;
     // display: flex;
     // flex-direction: column;
 
-    .background,
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -2;
+    }
+
     .background2 {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: 0;
-    }
-
-    .background2 {
+      z-index: -1;
       img {
         object-fit: cover;
+        // opacity: 0.1;
+        animation: FADEIN 3s forwards;
+        z-index: -1;
+      }
+    }
+
+    @keyframes FADEIN {
+      0% {
+        opacity: 0;
+      }
+      90% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
       }
     }
 
@@ -105,6 +126,10 @@ mat-sidenav-container {
       // height: 100%;
       height: auto;
       // overflow: hidden;
+    }
+
+    cccc-footer {
+      z-index: 10;
     }
   }
 
