@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "build": "npm run clean && ng build --prod --base-href='/comet-checker/'",
+    "build": "npm run clean && ng build --base-href='/comet-checker/'",
     "test": "npm run lint && ng test --configuration=test",
     "lint": "ng lint",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",

@@ -13,7 +13,7 @@ export const environment = {
   envName: 'DEV',
   production: false,
   test: false,
-  i18nPrefix: '',
+  i18nPrefix: '/comet-checker',
   versions: {
     app: packageJson.version,
     angular: packageJson.dependencies['@angular/core'],
