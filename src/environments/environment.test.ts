@@ -3,7 +3,7 @@ const packageJson = require('../../package.json');
 // import packageJson from '../../package.json';
 
 export const environment = {
-  appName: 'Angular Ngrx Material Starter',
+  appName: 'Comet Checker',
   envName: 'TEST',
   production: false,
   test: true,

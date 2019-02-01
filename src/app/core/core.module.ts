@@ -6,10 +6,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import {
-  StoreRouterConnectingModule,
-  RouterStateSerializer
-} from '@ngrx/router-store';
+import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router-store';
 
 import { environment } from '@env/environment';
 
@@ -38,7 +35,7 @@ import { GoogleAnalyticsEffects } from './google-analytics/google-analytics.effe
     environment.production
       ? []
       : StoreDevtoolsModule.instrument({
-          name: 'Angular NgRx Material Starter'
+          name: 'Comet Checker'
         }),
 
     // 3rd party
@@ -52,6 +49,7 @@ import { GoogleAnalyticsEffects } from './google-analytics/google-analytics.effe
   ],
   declarations: [],
   providers: [
+    //
     NotificationService,
     LocalStorageService,
     AuthGuardService,
@@ -76,9 +74,5 @@ export class CoreModule {
 }
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(
-    http,
-    `${environment.i18nPrefix}/assets/i18n/`,
-    '.json'
-  );
+  return new TranslateHttpLoader(http, `${environment.i18nPrefix}/assets/i18n/`, '.json');
 }

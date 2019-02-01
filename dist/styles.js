@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, ".app-loading .logo {\n  width: 64px;\n  height: 64px;\n  background: url('/comet-checker/logo0.png') center center no-repeat;\n  background-size: cover; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kd2Qvd29yay9qYXZhc2NyaXB0L2FuZ3VsYXIvY29tZXQtY2NjL3NyYy9zdHlsZXMtYXBwLWxvYWRpbmcuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLFlBQVc7RUFDWCxhQUFZO0VBQ1osb0VBQWtFO0VBQ2xFLHVCQUFzQixFQUN2QiIsImZpbGUiOiJzcmMvc3R5bGVzLWFwcC1sb2FkaW5nLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwLWxvYWRpbmcge1xuICAubG9nbyB7XG4gICAgd2lkdGg6IDY0cHg7XG4gICAgaGVpZ2h0OiA2NHB4O1xuICAgIGJhY2tncm91bmQ6IHVybCguL2Fzc2V0cy9pbWFnZXMvbG9nbzAucG5nKSBjZW50ZXIgY2VudGVyIG5vLXJlcGVhdDtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICB9XG59XG4iXX0= */", '', '']]
+module.exports = [[module.i, ".app-loading .logo {\n  width: 64px;\n  height: 64px;\n  background: url('logo0.png') center center no-repeat;\n  background-size: cover; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kd2Qvd29yay9qYXZhc2NyaXB0L2FuZ3VsYXIvY29tZXQtY2NjL3NyYy9zdHlsZXMtYXBwLWxvYWRpbmcuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLFlBQVc7RUFDWCxhQUFZO0VBQ1oscURBQWtFO0VBQ2xFLHVCQUFzQixFQUN2QiIsImZpbGUiOiJzcmMvc3R5bGVzLWFwcC1sb2FkaW5nLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwLWxvYWRpbmcge1xuICAubG9nbyB7XG4gICAgd2lkdGg6IDY0cHg7XG4gICAgaGVpZ2h0OiA2NHB4O1xuICAgIGJhY2tncm91bmQ6IHVybCguL2Fzc2V0cy9pbWFnZXMvbG9nbzAucG5nKSBjZW50ZXIgY2VudGVyIG5vLXJlcGVhdDtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICB9XG59XG4iXX0= */", '', '']]
 
 /***/ }),
 

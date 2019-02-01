@@ -9,7 +9,7 @@ import * as packageJson from '../../package.json';
 // console.log('packageJson: ', packageJson);
 
 export const environment = {
-  appName: 'Angular Ngrx Material Starter',
+  appName: 'Comet Checker',
   envName: 'DEV',
   production: false,
   test: false,
