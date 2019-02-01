@@ -18,7 +18,8 @@
     "format:write": "prettier {src,e2e}/**/*.{ts,json,md,scss} --write",
     "format:test": "prettier {src,e2e}/**/*.{ts,json,md,scss} --list-different",
     "analyze": "npm run clean && npm run build:prod -- --stats-json && webpack-bundle-analyzer ./dist/stats.json",
-    "compodoc": "compodoc -p src/tsconfig.app.json"
+    "compodoc": "compodoc -p src/tsconfig.app.json",
+    "accessability":"./node_modules/pa11y-ci/bin/pa11y-ci.js"
   },
   "husky": {
     "hooks": {
