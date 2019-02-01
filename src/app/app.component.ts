@@ -4,7 +4,7 @@ import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import { ActionAuthLogin, ActionAuthLogout, routeAnimations, IAppState, LocalStorageService, selectIsAuthenticated } from '@app/core';
-import { environment as env } from '@env/environment';
+// import { environment as env } from '@env/environment';
 
 import {
   //
@@ -24,9 +24,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   animations: [routeAnimations]
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  isProd = env.production;
-  envName = env.envName;
-  version = env.versions.app;
   logo = require('../assets/images/logo0.png');
 
   //Progressive Background Image Loading:
