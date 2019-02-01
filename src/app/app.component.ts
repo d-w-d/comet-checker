@@ -42,6 +42,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   theme$: Observable<string>;
   hoverMenu$: Observable<boolean>;
 
+  palomarImage: HTMLImageElement;
+  palomarImageSource = 'https://s3.amazonaws.com/dwds-misc/palomar.jpg';
+  isPalomarImageLoaded = false;
+
   xxx: any;
   _route: string;
   overRideToolbarColor = {};
@@ -60,6 +64,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    //Subscribe to changes in route:
     this.route.events.subscribe(event => {
       // console.log('route changed');
       const url = window.location.toString();
@@ -69,6 +74,15 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.overRideToolbarColor = this._route === 'home2' ? { backgroundColor: 'rgba(0,0,0,0.3)' } : {};
       // console.log('this._route: ', this._route);
     });
+
+    //Image:
+
+    this.palomarImage = new Image();
+    this.palomarImage.src = this.palomarImageSource;
+    this.palomarImage.onload = () => {
+      //
+      this.isPalomarImageLoaded = true;
+    };
 
     // this.store.subscribe(data => console.log('data: ', data));
     this.storageService.testLocalStorage();

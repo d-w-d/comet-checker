@@ -76,6 +76,12 @@
             >
                 <div class="background"></div>
                 <div
+                    *ngIf="isPalomarImageLoaded"
+                    class="background2"
+                >
+                    <img [src]=[palomarImageSource]>
+                </div>
+                <div
                     class="content"
                     [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig.path"
                 >

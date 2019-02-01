@@ -1,3 +1,3 @@
-# my-ngx-boilerplate
+# SBN Cross-Catalog Comet Checker
 
-This is an angular front-end forked from [angular-ngrx-material-starter](https://github.com/tomastrajan/angular-ngrx-material-starter)
+This site is in development.
