@@ -28,10 +28,10 @@ import { CoreModule } from '@app/core';
 })
 export class DynamicModule {}
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(
-    http, //
-    `${environment.i18nPrefix}/assets/i18n/examples/`,
-    '.json'
-  );
-}
+// export function HttpLoaderFactory(http: HttpClient) {
+//   return new TranslateHttpLoader(
+//     http, //
+//     `${environment.i18nPrefix}/assets/i18n/examples/`,
+//     '.json'
+//   );
+// }
