@@ -15,6 +15,7 @@ import {
   selectSettingsStickyHeader,
   selectSettingsHoverMenu
 } from './settings';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'cccc-root',
@@ -26,7 +27,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   isProd = env.production;
   envName = env.envName;
   version = env.versions.app;
-  logo = require('../assets/images/logo.png');
+  logo = require('../assets/images/logo0.png');
 
   //Progressive Background Image Loading:
   blurredBackgroundImage = require('../assets/images/blurred_palomar.jpg');
@@ -41,7 +42,17 @@ export class AppComponent implements OnInit, AfterViewInit {
   theme$: Observable<string>;
   hoverMenu$: Observable<boolean>;
 
-  constructor(private store: Store<IAppState>, private storageService: LocalStorageService) {}
+  xxx: any;
+  _route: string;
+  overRideToolbarColor = {};
+
+  constructor(
+    //
+    private store: Store<IAppState>,
+    private storageService: LocalStorageService,
+    // private route: ActivatedRoute
+    private route: Router
+  ) {}
 
   private static isIEorEdgeOrSafari() {
     // console.log('>>>', browser().name, ['ie', 'edge', 'safari'].includes(browser().name));
@@ -49,6 +60,16 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.route.events.subscribe(event => {
+      // console.log('route changed');
+      const url = window.location.toString();
+      const ar = url.split('/');
+      const lastPartOfUrl = ar[ar.length - 1];
+      this._route = lastPartOfUrl;
+      this.overRideToolbarColor = this._route === 'home2' ? { backgroundColor: 'rgba(0,0,0,0.3)' } : {};
+      // console.log('this._route: ', this._route);
+    });
+
     // this.store.subscribe(data => console.log('data: ', data));
     this.storageService.testLocalStorage();
 

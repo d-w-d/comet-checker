@@ -12,7 +12,7 @@ export class NavService {
   readonly navLinks: INav[] = [
     {
       label: 'Home',
-      link: 'home',
+      link: 'home2',
       icon: 'home'
     },
     {

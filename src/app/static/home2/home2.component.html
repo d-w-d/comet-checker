@@ -1,4 +1,5 @@
 <div
+    *ngIf="true || !!isVideoLoaded"
     class="home2-page-content"
     [ngClass]="routeAnimationsElements"
 >
@@ -6,6 +7,7 @@
     <div class="video-wrapper">
         <video
             #video
+            id="myVideo"
             class="vid"
             loop="true"
             min-width="100%"
@@ -15,11 +17,27 @@
             muted
         >
             <source
-                src="https://s3.amazonaws.com/dwds-misc/space-telescopes.mp4"
+                id="my-video-source"
+                [src]="videoURL"
                 type="video/mp4"
             >
+            <source id="my-video-source">
             Your browser does not support the video tag.
         </video>
+    </div>
+
+    <div class="intro-text">
+        <div class="text-panel">
+            <h1>COMET CROSS CHECKER</h1>
+            <h2>Another Home-Page Sketch</h2>
+            <p>
+                <input
+                    class="home-page-search"
+                    type="text"
+                    placeholder='search catalog'
+                >
+            </p>
+        </div>
     </div>
 
 </div>
