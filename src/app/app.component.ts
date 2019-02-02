@@ -40,8 +40,11 @@ export class AppComponent implements OnInit, AfterViewInit {
   hoverMenu$: Observable<boolean>;
 
   palomarImage: HTMLImageElement;
-  palomarImageSource = 'https://s3.amazonaws.com/dwds-misc/palomar.jpg';
+  // palomarImageSource = 'https://s3.amazonaws.com/dwds-misc/palomar.jpg';
+
+  palomarImageSource = 'https://s3.amazonaws.com/dwds-misc/telescope_v2.png';
   isPalomarImageLoaded = false;
+  isAppBackgroundShown = false;
 
   // xxx: any;
   // _route: string;
@@ -61,12 +64,16 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    // Determine image to show:
+    if (window.innerWidth < 600) this.palomarImageSource = 'https://s3.amazonaws.com/dwds-misc/telescope_v3.png';
+
     //Subscribe to changes in route:
     this.route.events.subscribe(event => {
       const url = window.location.toString();
       const ar = url.split('/');
       const lastPartOfUrl = ar[ar.length - 1];
       this.overRideToolbarColor = lastPartOfUrl === 'home2' ? { backgroundColor: 'rgba(0,0,0,0.3)' } : {};
+      this.isAppBackgroundShown = !['home1', 'home2'].includes(lastPartOfUrl);
     });
 
     //Lazy Load Unblurred Image:
