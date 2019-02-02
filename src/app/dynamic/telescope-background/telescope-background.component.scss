@@ -1,0 +1,11 @@
+@import '../../../styles-variables';
+
+.telescope-background-container {
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: calc(100vh - #{$footer-height});
+    animation: FADEIN 1s forwards;
+    z-index: -1;
+  }
+}

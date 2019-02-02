@@ -27,7 +27,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   logo = require('../assets/images/logo0.png');
 
   //Progressive Background Image Loading:
-  blurredBackgroundImage = require('../assets/images/blurred_palomar.jpg');
+  // blurredBackgroundImage = require('../assets/images/blurred_palomar.jpg');
   backgroundImageStyling = {
     // background: `url('https://s3.amazonaws.com/dwds-misc/blurred_palomar.jpg')  no-repeat center top`,
     'background-size': 'cover'
@@ -39,11 +39,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   theme$: Observable<string>;
   hoverMenu$: Observable<boolean>;
 
-  palomarImage: HTMLImageElement;
-  // palomarImageSource = 'https://s3.amazonaws.com/dwds-misc/palomar.jpg';
-
-  palomarImageSource = 'https://s3.amazonaws.com/dwds-misc/telescope_v2.png';
-  isPalomarImageLoaded = false;
+  image: HTMLImageElement;
+  imageSource = 'https://s3.amazonaws.com/dwds-misc/telescope_v2.png';
+  isImageLoaded = false;
   isAppBackgroundShown = false;
 
   // xxx: any;
@@ -59,7 +57,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     // Determine image to show:
-    if (window.innerWidth < 600) this.palomarImageSource = 'https://s3.amazonaws.com/dwds-misc/telescope_v3.png';
+    if (window.innerWidth < 600) this.imageSource = 'https://s3.amazonaws.com/dwds-misc/telescope_v3.png';
 
     //Subscribe to changes in route:
     this.route.events.subscribe(event => {
@@ -71,11 +69,11 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
 
     //Lazy Load Unblurred Image:
-    this.palomarImage = new Image();
-    this.palomarImage.src = this.palomarImageSource;
-    this.palomarImage.onload = () => {
-      this.isPalomarImageLoaded = true;
-    };
+    // this.palomarImage = new Image();
+    // this.palomarImage.src = this.palomarImageSource;
+    // this.palomarImage.onload = () => {
+    //   this.isPalomarImageLoaded = true;
+    // };
 
     this.storageService.testLocalStorage();
 

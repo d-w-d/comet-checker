@@ -74,31 +74,17 @@ mat-sidenav-container {
     left: 0;
     right: 0;
     bottom: 0;
-    // background-color: pink;
     overflow: scroll;
     z-index: 0;
-    // display: flex;
-    // flex-direction: column;
 
-    .background {
+    .telescope-background-wrapper {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      // min-height: calc(100vh - #{$footer-height});
       z-index: -1;
       background-color: #4d5d81;
-      // background-image: url(https://s3.amazonaws.com/dwds-misc/telescope_v3.png);
-      // background-size: cover;
-
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: calc(100vh - #{$footer-height});
-        animation: FADEIN 1s forwards;
-        z-index: -1;
-      }
     }
 
     @keyframes FADEIN {
