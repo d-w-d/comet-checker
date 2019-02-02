@@ -24,10 +24,7 @@
                 >
                     <mat-icon *ngIf="!!child.icon && !child.isFA">{{child.icon}}</mat-icon>
                     <mat-icon *ngIf="!!child.icon && !!child.isFA">
-                        <fa-icon
-                            [icon]="child.icon"
-                            color="pink"
-                        ></fa-icon>
+                        <fa-icon [icon]="child.icon"></fa-icon>
                     </mat-icon>
                     <span>{{child.label}}</span>
                 </button>
@@ -44,10 +41,7 @@
                 >
                     <mat-icon *ngIf="!!child.icon && !child.isFA">{{child.icon}}</mat-icon>
                     <mat-icon *ngIf="!!child.icon && !!child.isFA">
-                        <fa-icon
-                            [icon]="child.icon"
-                            color="pink"
-                        ></fa-icon>
+                        <fa-icon [icon]="child.icon"></fa-icon>
                     </mat-icon>
                     <span>{{child.label}}</span>
                 </button>

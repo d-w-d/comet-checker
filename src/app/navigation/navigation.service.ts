@@ -11,7 +11,17 @@ import { INav } from './navigation.models';
 export class NavService {
   readonly navLinks: INav[] = [
     {
-      label: 'Home',
+      label: 'HomeV0',
+      link: 'home',
+      icon: 'home'
+    },
+    {
+      label: 'HomeV1',
+      link: 'home1',
+      icon: 'home'
+    },
+    {
+      label: 'HomeV2',
       link: 'home2',
       icon: 'home'
     },

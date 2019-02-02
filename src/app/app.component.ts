@@ -29,7 +29,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   //Progressive Background Image Loading:
   blurredBackgroundImage = require('../assets/images/blurred_palomar.jpg');
   backgroundImageStyling = {
-    background: `url('https://s3.amazonaws.com/dwds-misc/blurred_palomar.jpg')  no-repeat center top`,
+    // background: `url('https://s3.amazonaws.com/dwds-misc/blurred_palomar.jpg')  no-repeat center top`,
     'background-size': 'cover'
   };
 
