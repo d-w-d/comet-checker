@@ -50,13 +50,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   // _route: string;
   overRideToolbarColor = {};
 
-  constructor(
-    //
-    private store: Store<IAppState>,
-    private storageService: LocalStorageService,
-    // private route: ActivatedRoute
-    private route: Router
-  ) {}
+  constructor(private store: Store<IAppState>, private storageService: LocalStorageService, private route: Router) {}
 
   private static isIEorEdgeOrSafari() {
     // console.log('>>>', browser().name, ['ie', 'edge', 'safari'].includes(browser().name));
@@ -72,7 +66,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       const url = window.location.toString();
       const ar = url.split('/');
       const lastPartOfUrl = ar[ar.length - 1];
-      this.overRideToolbarColor = lastPartOfUrl === 'home2' ? { backgroundColor: 'rgba(0,0,0,0.3)' } : {};
+      this.overRideToolbarColor = true || lastPartOfUrl === 'home2' ? { backgroundColor: 'rgba(0,0,0,0.3)' } : {};
       this.isAppBackgroundShown = !['home1', 'home2'].includes(lastPartOfUrl);
     });
 
