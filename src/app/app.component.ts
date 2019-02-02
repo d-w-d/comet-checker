@@ -43,8 +43,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   palomarImageSource = 'https://s3.amazonaws.com/dwds-misc/palomar.jpg';
   isPalomarImageLoaded = false;
 
-  xxx: any;
-  _route: string;
+  // xxx: any;
+  // _route: string;
   overRideToolbarColor = {};
 
   constructor(
@@ -63,35 +63,29 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     //Subscribe to changes in route:
     this.route.events.subscribe(event => {
-      // console.log('route changed');
       const url = window.location.toString();
       const ar = url.split('/');
       const lastPartOfUrl = ar[ar.length - 1];
-      this._route = lastPartOfUrl;
-      this.overRideToolbarColor = this._route === 'home2' ? { backgroundColor: 'rgba(0,0,0,0.3)' } : {};
-      // console.log('this._route: ', this._route);
+      this.overRideToolbarColor = lastPartOfUrl === 'home2' ? { backgroundColor: 'rgba(0,0,0,0.3)' } : {};
     });
 
-    //Image:
-
+    //Lazy Load Unblurred Image:
     this.palomarImage = new Image();
     this.palomarImage.src = this.palomarImageSource;
     this.palomarImage.onload = () => {
-      //
       this.isPalomarImageLoaded = true;
     };
 
-    // this.store.subscribe(data => console.log('data: ', data));
     this.storageService.testLocalStorage();
 
-    // if (AppComponent.isIEorEdgeOrSafari()) {
-    // console.log('Really?!?! 2');
-    this.store.dispatch(
-      new ActionSettingsChangeAnimationsPageDisabled({
-        pageAnimationsDisabled: AppComponent.isIEorEdgeOrSafari()
-      })
-    );
-    // }
+    if (AppComponent.isIEorEdgeOrSafari()) {
+      // console.log('Really?!?! 2');
+      this.store.dispatch(
+        new ActionSettingsChangeAnimationsPageDisabled({
+          pageAnimationsDisabled: AppComponent.isIEorEdgeOrSafari()
+        })
+      );
+    }
 
     this.isAuthenticated$ = this.store.pipe(select(selectIsAuthenticated));
     this.stickyHeader$ = this.store.pipe(select(selectSettingsStickyHeader));
