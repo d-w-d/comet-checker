@@ -14,14 +14,13 @@ const PROXY_URL = '';
 export class ZtfDataService {
   constructor(private httpClient: HttpClient) {}
 
-  getOortData(symbol: string): Observable<IZTFData> {
-    return this.httpClient.get(PROXY_URL + `https://oort.astro.umd.edu/ztf/getsth`).pipe(
-      map((data: any) => ({
-        // asteroids: ['asteroid1', 'asteroid2'],
-        // greeting: 'hello!!!'
-        asteroids: data.asteroids,
-        greeting: data.greeting
-      }))
+  getOortData(): Observable<IZTFData> {
+    return this.httpClient.get(PROXY_URL + `https://oort.astro.umd.edu/cccc/getallztfs`).pipe(
+      // map((data: any) => ({
+      //   asteroids: data.asteroids,
+      //   greeting: data.greeting
+      // }))
+      map((data: any) => data)
     );
   }
 }

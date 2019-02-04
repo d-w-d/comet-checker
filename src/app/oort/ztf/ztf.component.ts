@@ -19,9 +19,9 @@ export class ZtfComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.ztfDataService.getOortData('xxx').subscribe((data: IZTFData) => {
-      console.log('XXX >>>', data, JSON.stringify(data, null, 2));
-      this.data = JSON.stringify(data, null, 2);
-    });
+    // this.ztfDataService.getOortData('xxx').subscribe((data: IZTFData) => {
+    //   console.log('XXX >>>', data, JSON.stringify(data, null, 2));
+    //   this.data = JSON.stringify(data, null, 2);
+    // });
   }
 }
