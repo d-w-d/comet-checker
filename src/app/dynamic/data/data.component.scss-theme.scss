@@ -7,39 +7,23 @@
   $background: map-get($theme, background);
 
   cccc-data {
-    // table,
-    // tr,
-    // th,
-    // td,
-    // tbody,
-    .data-table {
+    // Make table transparent; color is provided by table
+    .table-wrapper {
+      background-color: rgba(mat-color($background, background), 0.9);
       // background-color: rgba(mat-color($background, background), 1);
-      // background-color: rgba(mat-color($primary, darker), 0.3);
-      background-color: rgba(mat-color($primary), 0.8);
-    }
 
-    .neo-neo-table-wrapper {
-      // background-color: rgba(mat-color($background, background), 1);
-      // background-color: rgba(mat-color($background, background), 0.9);
-      // background-color: green;
+      .data-table,
+      .paginator {
+        background-color: rgba(0, 0, 0, 0);
+        table,
+        thead,
+        tr,
+        th,
+        td,
+        tbody {
+          background-color: rgba(0, 0, 0, 0);
+        }
+      }
     }
   }
-
-  // .mat-row {
-  //   background-color: rgba(mat-color($background, background), 0.5);
-  // }
-
-  .mat-row:nth-child(odd),
-  table,
-  tr,
-  th,
-  td,
-  tbody {
-    // background-color: rgba(mat-color($background, background), 0.1);
-    // background-color: rgba(255, 0, 0, 0.3);
-  }
-
-  // .mat-row:nth-child(odd) {
-  //   background-color: black;
-  // }
 }

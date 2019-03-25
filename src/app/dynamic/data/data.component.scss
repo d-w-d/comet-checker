@@ -14,7 +14,6 @@
 }
 
 hr {
-  // color: rgba(0, 0, 0, 0.5);
   border-color: rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -25,7 +24,6 @@ hr {
 
 .mat-form-field {
   font-size: 14px;
-  // width: 100%;
 }
 
 .mat-row {
@@ -33,47 +31,23 @@ hr {
 }
 
 .mat-cell {
-  padding: 10px 10px 10px 0;
+  padding: 10px 10px 10px 0px;
 }
 
 //
+.data-gui {
+  //
+}
+
 .table-wrapper {
-}
-
-.neo-table-wrapper {
-  // position: relative;
-  width: auto;
-}
-
-.neo-neo-table-wrapper {
-  position: relative;
   display: inline-block;
-  width: auto;
-  height: auto;
-  margin: auto auto;
-  // background-color: red;
-}
 
-table,
-tr {
-  margin: auto auto;
-  // color: rgba(mat-color($background, background), 0.8);
-  color: red;
-  min-width: 380px;
-}
+  table,
+  tr {
+    margin: auto auto;
+  }
 
-.paginator {
-  width: 100%;
-  // position: absolute;
-  // top: 0px;
-  // bottom: 0px;
-  // left: 0px;
-  // right: 0px;
-}
-
-@media (max-width: map-get($grid-breakpoints, sm)) {
-  .paginator,
-  table {
-    // min-width: 95vw;
+  .paginator {
+    width: 100%;
   }
 }

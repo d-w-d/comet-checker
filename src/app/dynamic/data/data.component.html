@@ -14,7 +14,7 @@
 
     <div
         *ngIf="!!data || true"
-        class="table-wrapper"
+        class="data-gui"
     >
 
         <hr class="local-hr">
@@ -44,8 +44,8 @@
                 >
             </mat-form-field>
         </div>
-        <!-- <div class="neo-table-wrapper mat-elevation-z8"> -->
-        <div class="neo-neo-table-wrapper mat-elevation-z8 ">
+
+        <div class="table-wrapper mat-elevation-z8 ">
             <table
                 mat-table
                 matSort
@@ -88,6 +88,6 @@
                 [pageSizeOptions]="pageSizeOptions"
             ></mat-paginator>
         </div>
-        <!-- </div> -->
+
     </div>
 </div>
