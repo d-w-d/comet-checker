@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit, ViewChild, OnChanges } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { ZtfDataService } from '@app/oort/ztf-data.service';
 import { IMOSData } from '@app/oort/ztf-data.model';
 import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
@@ -10,15 +10,10 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
   styleUrls: ['./data.component.scss']
 })
 export class DataComponent implements OnInit, AfterViewInit {
-  //
-
   routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-
-  // data: IMOSData | null = null;
-  // data: any = null;
 
   data: MatTableDataSource<IMOSData>;
 
@@ -47,6 +42,8 @@ export class DataComponent implements OnInit, AfterViewInit {
 
   allColumns: string[] = this.shownCols.concat(this.hiddenCols);
 
+  pageSizeOptions = [5, 10, 25];
+
   constructor(private ztfData: ZtfDataService) {}
 
   ngOnInit() {}
@@ -54,13 +51,16 @@ export class DataComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.ztfData.getOortData().subscribe(
       (data: IMOSData[]) => {
+        //
+        const max_pagination_value = Math.max.apply(Math, this.pageSizeOptions);
+        console.log('max_pagination_value:', max_pagination_value, data.length);
+        if (data.length > max_pagination_value) {
+          this.pageSizeOptions.push(data.length);
+        }
+        //
         this.data = new MatTableDataSource(data);
-
-        // Be careful! paginator and sort elements will be undefined until data is not-null and the table is then rendered!
         this.data.paginator = this.paginator;
         this.data.sort = this.sort;
-        console.log('paginator', this.paginator);
-        console.log('sort', this.sort);
       },
       err => {
         console.log('Error:' + JSON.stringify(err));
@@ -69,11 +69,7 @@ export class DataComponent implements OnInit, AfterViewInit {
     );
   }
 
-  /**
-   * Click buttons to toggle columns included/excluded
-   * @param col: column name to be added/removed
-   */
-  addRemoveCols(col: string) {
+  addRemoveColumns(col: string) {
     if (this.shownCols.includes(col) && this.shownCols.length > 1) {
       // Remove column
       const index = this.shownCols.indexOf(col);
@@ -89,7 +85,6 @@ export class DataComponent implements OnInit, AfterViewInit {
 
   applyFilter(filterValue: string) {
     this.data.filter = filterValue.trim().toLowerCase();
-
     if (!!this.data.paginator) {
       this.data.paginator.firstPage();
     }
