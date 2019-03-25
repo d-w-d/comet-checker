@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit } from '@angular/core';
 import { ZtfDataService } from '@app/oort/ztf-data.service';
 import { IMOSData } from '@app/oort/ztf-data.model';
+import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
 
 @Component({
   selector: 'cccc-data',
@@ -9,6 +10,8 @@ import { IMOSData } from '@app/oort/ztf-data.model';
   // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DataComponent implements OnInit, AfterViewInit {
+  routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
+
   constructor(private ztfData: ZtfDataService) {}
 
   data: IMOSData | null = null;

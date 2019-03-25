@@ -1,4 +1,7 @@
-<div class="data-page-wrapper">
+<div
+    class="data-page-wrapper"
+    [ngClass]="routeAnimationsElements"
+>
 
     <h1 class="main-heading">Moving Object Search</h1>
 
@@ -33,8 +36,8 @@
         <table
             mat-table
             [dataSource]="data"
-            class="mat-elevation-z8"
-            color='background'
+            class="mat-elevation-z8 data-table"
+            color='accent'
         >
             <!-- <span *ngFor="let item of navItems; let i = index"> -->
             <span *ngFor="let colx of shownCols; let j = index">

@@ -20,6 +20,7 @@
 @import 'app/static/about/about.component.scss-theme';
 @import 'app/static/home/home.component.scss-theme';
 @import 'app/settings/components/settings-container.component.scss-theme';
+@import 'app/dynamic/data/data.component.scss-theme';
 @import 'app/dynamic/contact/contact.component.scss-theme';
 
 @import '../node_modules/normalize-scss/sass/_normalize.scss';
@@ -31,6 +32,7 @@
   @include cccc-home-component-theme($theme);
   @include cccc-contact-component-theme($theme);
   @include cccc-settings-component-theme($theme);
+  @include cccc-data-component-theme($theme);
   @include cccc-big-input-component-theme($theme);
 }
 
