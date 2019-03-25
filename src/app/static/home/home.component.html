@@ -3,5 +3,23 @@
     [ngClass]="routeAnimationsElements"
 >
     <h1>{{ 'cccc.title.long' | translate }}</h1>
-    <h3>Some Banner Slogan</h3>
+    <h2>Some Banner Slogan</h2>
+
+    <div class="search-input-wrapper">
+        <!-- <mat-form-field
+            color="accent"
+            class="search-input"
+        > -->
+        <form>
+            <input
+                class="search-input"
+                type="text"
+                (keyup)="beginSearch($event.target.value)"
+                placeholder="Search Catalog"
+                autocomplete="off"
+            >
+        </form>
+
+        <!-- </mat-form-field> -->
+    </div>
 </div>

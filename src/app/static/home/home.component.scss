@@ -21,4 +21,39 @@ h2 {
   z-index: 0;
   text-align: center;
   color: white;
+
+  .search-input-wrapper {
+    textarea:focus,
+    input:focus,
+    *:focus {
+      outline: none;
+    }
+    .search-input {
+      border: none;
+      text-align: center;
+      margin: 20px 0px;
+      width: 200px;
+      height: 35px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: white;
+      font-size: 22px;
+      opacity: 1; /* Firefox */
+    }
+  }
+
+  textarea:focus,
+  input:focus,
+  *:focus {
+    outline: none;
+  }
+
+  .form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 }

@@ -14,4 +14,8 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  beginSearch() {
+    // Initiate search logic
+  }
 }

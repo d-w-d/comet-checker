@@ -44,6 +44,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   isImageLoaded = false;
   isAppBackgroundShown = false;
 
+  isShootingStarsDisplayed = true;
+
   // xxx: any;
   // _route: string;
   overRideToolbarColor = {};
@@ -66,6 +68,9 @@ export class AppComponent implements OnInit, AfterViewInit {
       const lastPartOfUrl = ar[ar.length - 1];
       this.overRideToolbarColor = true || lastPartOfUrl === 'home2' ? { backgroundColor: 'rgba(0,0,0,0.3)' } : {};
       this.isAppBackgroundShown = !['home1', 'home2'].includes(lastPartOfUrl);
+      // console.log('lastPartOfUrl: ', lastPartOfUrl);
+
+      this.isShootingStarsDisplayed = lastPartOfUrl.trim() === '' ? true : false;
     });
 
     //Lazy Load Unblurred Image:

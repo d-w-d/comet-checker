@@ -77,7 +77,10 @@
                     *ngIf="isAppBackgroundShown"
                     class="telescope-background-wrapper"
                 >
-                    <cccc-telescope-background [imageSource]=[imageSource]></cccc-telescope-background>
+                    <cccc-telescope-background
+                        [isShootingStarsDisplayed]="isShootingStarsDisplayed"
+                        [imageSource]=[imageSource]
+                    ></cccc-telescope-background>
                     <!-- <img
                         [src]=[imageSource]
                         width="100%"
