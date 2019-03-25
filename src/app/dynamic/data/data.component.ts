@@ -20,11 +20,11 @@ export class DataComponent implements OnInit, AfterViewInit {
     'dec',
     'dra',
     'ddec',
-    'ra3sig'
-    // 'dec3sig',
-    // 'vmag',
-    // 'rh',
-    // 'rdot',
+    'ra3sig',
+    'dec3sig',
+    'vmag',
+    'rh',
+    'rdot'
     // 'delta',
     // 'phase',
     // 'selong',
