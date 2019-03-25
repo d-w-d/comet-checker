@@ -1,20 +1,43 @@
 <div class="data-page-wrapper">
 
-    <h1
+    <h1 class="main-heading">Moving Object Search</h1>
+
+    <h3
         *ngIf="!data"
         class="main-heading"
     >
         Data Will Appear Here Very Soon!
-    </h1>
+    </h3>
 
-    <div *ngIf="!!data">
+    <div
+        *ngIf="!!data"
+        class="table-wrapper"
+    >
+
+        <hr class="local-hr">
+
+        <span *ngFor="let col of allColumns; let i = index">
+
+            <button
+                mat-raised-button
+                class="col-button"
+                (click)="addRemoveCols(col)"
+                [color]="shownCols.includes(col) ? 'background': 'primary'"
+            >
+                {{col}}
+            </button>
+        </span>
+
+        <hr class="local-hr">
+
         <table
             mat-table
             [dataSource]="data"
             class="mat-elevation-z8"
+            color='background'
         >
             <!-- <span *ngFor="let item of navItems; let i = index"> -->
-            <span *ngFor="let colx of displayedColumnsOrder; let i = index">
+            <span *ngFor="let colx of shownCols; let j = index">
                 <ng-container [matColumnDef]="colx">
                     <th
                         mat-header-cell
@@ -35,11 +58,11 @@
             <tbody>
                 <tr
                     mat-header-row
-                    *matHeaderRowDef="displayedColumnsOrder"
+                    *matHeaderRowDef="shownCols"
                 ></tr>
                 <tr
                     mat-row
-                    *matRowDef="let row; columns: displayedColumnsOrder;"
+                    *matRowDef="let row; columns: shownCols;"
                 ></tr>
             </tbody>
         </table>

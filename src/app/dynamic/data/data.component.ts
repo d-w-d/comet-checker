@@ -13,11 +13,14 @@ export class DataComponent implements OnInit, AfterViewInit {
 
   data: IMOSData | null = null;
 
-  displayedColumnsOrder: string[] = [
+  shownCols: string[] = [
     //
     'obsjd',
     'ra',
-    'dec',
+    'dec'
+  ];
+  hiddenCols: string[] = [
+    //
     'dra',
     'ddec',
     'ra3sig',
@@ -33,6 +36,8 @@ export class DataComponent implements OnInit, AfterViewInit {
     'trueanomaly'
   ];
 
+  allColumns: string[] = this.shownCols.concat(this.hiddenCols);
+
   ngOnInit() {}
 
   ngAfterViewInit() {
@@ -45,5 +50,19 @@ export class DataComponent implements OnInit, AfterViewInit {
         this.data = null;
       }
     );
+  }
+
+  addRemoveCols(col: string) {
+    if (this.shownCols.includes(col) && this.shownCols.length > 1) {
+      // Remove column
+      const index = this.shownCols.indexOf(col);
+      if (index !== -1) this.shownCols.splice(index, 1);
+    } else if (this.shownCols.length <= 1) {
+      return;
+    } else {
+      // Add column and order shown cols by button order
+      this.shownCols.push(col);
+      this.shownCols = this.shownCols.sort((a, b) => this.allColumns.indexOf(a) - this.allColumns.indexOf(b));
+    }
   }
 }
