@@ -12,6 +12,9 @@ export class TelescopeBackgroundComponent implements OnInit {
   @Input()
   imageSource: string;
 
+  @Input()
+  isShootingStarsDisplayed: boolean;
+
   constructor() {}
 
   ngOnInit() {}

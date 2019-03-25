@@ -1,7 +1,41 @@
 @import '../../../styles-variables';
 
 .telescope-background-container {
-  position: relative;
+  // position: relative;
+  position: fixed;
+  // object-fit: cover;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100vh;
+  // width: 100%;
+  // height: calc(100vh);
+  // height: calc(100vh - #{$footer-height});
+  animation: FADEIN 1s forwards;
+  z-index: 1;
+  // background: url('https://s3.amazonaws.com/dwds-misc/observatory-lg.png');
+  background-size: cover;
+  background: url('https://s3.amazonaws.com/dwds-misc/observatory-lg.png');
+
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    background: url('https://s3.amazonaws.com/dwds-misc/observatory-lg.png');
+    background-size: cover;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    background: url('https://s3.amazonaws.com/dwds-misc/observatory-lg.png');
+    background-size: cover;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    background: url('https://s3.amazonaws.com/dwds-misc/observatory-md.png');
+    background-size: cover;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    background: url('https://s3.amazonaws.com/dwds-misc/observatory-sm.png');
+    background-size: cover;
+  }
 
   .sky-image {
     position: fixed;

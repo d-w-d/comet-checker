@@ -15,9 +15,14 @@ export class DataComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    this.ztfData.getOortData().subscribe((data: any) => {
-      this.data = JSON.stringify(data);
-      console.log('DATA!!!', this.data);
-    });
+    this.ztfData.getOortData().subscribe(
+      (data: any) => {
+        this.data = data;
+      },
+      err => {
+        console.log('Error:' + JSON.stringify(err));
+        this.data = 'An error occurred';
+      }
+    );
   }
 }

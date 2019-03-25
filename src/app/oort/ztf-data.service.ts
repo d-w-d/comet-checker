@@ -3,10 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { IZTFData } from './ztf-data.model';
+import { IZTFData, IMOSData } from './ztf-data.model';
 
 // const PROXY_URL = 'https://cors-anywhere.herokuapp.com/';
-const PROXY_URL = '';
+const DATA_URL = 'https://oort.astro.umd.edu/catch/moving-object-search/?objid=909';
 
 @Injectable({
   providedIn: 'root'
@@ -14,38 +14,14 @@ const PROXY_URL = '';
 export class ZtfDataService {
   constructor(private httpClient: HttpClient) {}
 
-  getOortData(): Observable<IZTFData> {
-    return this.httpClient.get(PROXY_URL + `https://oort.astro.umd.edu/cccc/getallztfs`).pipe(
-      // map((data: any) => ({
-      //   asteroids: data.asteroids,
-      //   greeting: data.greeting
-      // }))
-      map((data: any) => data)
+  getOortData(): Observable<IMOSData[]> {
+    return this.httpClient.get(DATA_URL).pipe(
+      map((data: any) => {
+        // console.log('---------------');
+        // console.log(Object.keys(data.resource.data[0]));
+        // console.log('---------------');
+        return data.resource.data;
+      })
     );
   }
 }
-
-// @Injectable()
-// export class StockMarketService {
-//     constructor(private httpClient: HttpClient) {}
-
-//     retrieveStock(symbol: string): Observable<IStock> {
-//         return this.httpClient
-//             .get(
-//                 PROXY_URL +
-//                     `https://api.iextrading.com/1.0/stock/${symbol}/quote`
-//             )
-//             .pipe(
-//                 map((stock: any) => ({
-//                     symbol: stock.symbol,
-//                     exchange: stock.primaryExchange,
-//                     last: stock.latestPrice,
-//                     ccy: 'USD',
-//                     change: stock.close,
-//                     changePositive: stock.change.toString().indexOf('+') === 0,
-//                     changeNegative: stock.change.toString().indexOf('-') === 0,
-//                     changePercent: stock.changePercent.toFixed(2)
-//                 }))
-//             );
-//     }
-// }
