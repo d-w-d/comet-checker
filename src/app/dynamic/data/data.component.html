@@ -13,166 +13,24 @@
             [dataSource]="data"
             class="mat-elevation-z8"
         >
+            <!-- <span *ngFor="let item of navItems; let i = index"> -->
+            <span *ngFor="let colx of displayedColumnsOrder; let i = index">
+                <ng-container [matColumnDef]="colx">
+                    <th
+                        mat-header-cell
+                        *matHeaderCellDef
+                    >
+                        {{colx}}
+                    </th>
+                    <td
+                        mat-cell
+                        *matCellDef="let element"
+                    >
+                        {{element[colx]}}
+                    </td>
+                </ng-container>
 
-            <!-- obsjd Column -->
-            <ng-container matColumnDef="obsjd">
-                <th
-                    mat-header-cell
-                    *matHeaderCellDef
-                >
-                    obsjd
-                </th>
-                <td
-                    mat-cell
-                    *matCellDef="let element"
-                >
-                    {{element.obsjd}}
-                </td>
-            </ng-container>
-
-            <!-- ra Column -->
-            <ng-container matColumnDef="ra">
-                <th
-                    mat-header-cell
-                    *matHeaderCellDef
-                >
-                    ra
-                </th>
-                <td
-                    mat-cell
-                    *matCellDef="let element"
-                >
-                    {{element.ra}}
-                </td>
-            </ng-container>
-
-            <!-- dec Column -->
-            <ng-container matColumnDef="dec">
-                <th
-                    mat-header-cell
-                    *matHeaderCellDef
-                >
-                    dec
-                </th>
-                <td
-                    mat-cell
-                    *matCellDef="let element"
-                >
-                    {{element.dec}}
-                </td>
-            </ng-container>
-
-            <!-- dra Column -->
-            <ng-container matColumnDef="dra">
-                <th
-                    mat-header-cell
-                    *matHeaderCellDef
-                >
-                    dra
-                </th>
-                <td
-                    mat-cell
-                    *matCellDef="let element"
-                >
-                    {{element.dra}}
-                </td>
-            </ng-container>
-
-            <!-- ddec Column -->
-            <ng-container matColumnDef="ddec">
-                <th
-                    mat-header-cell
-                    *matHeaderCellDef
-                >
-                    ddec
-                </th>
-                <td
-                    mat-cell
-                    *matCellDef="let element"
-                >
-                    {{element.ddec}}
-                </td>
-            </ng-container>
-
-            <!-- ra3sig Column -->
-            <ng-container matColumnDef="ra3sig">
-                <th
-                    mat-header-cell
-                    *matHeaderCellDef
-                >
-                    ra3sig
-                </th>
-                <td
-                    mat-cell
-                    *matCellDef="let element"
-                >
-                    {{element.ra3sig}}
-                </td>
-            </ng-container>
-
-            <!-- dec3sig Column -->
-            <ng-container matColumnDef="dec3sig">
-                <th
-                    mat-header-cell
-                    *matHeaderCellDef
-                >
-                    dec3sig
-                </th>
-                <td
-                    mat-cell
-                    *matCellDef="let element"
-                >
-                    {{element.dec3sig}}
-                </td>
-            </ng-container>
-
-            <!-- vmag Column -->
-            <ng-container matColumnDef="vmag">
-                <th
-                    mat-header-cell
-                    *matHeaderCellDef
-                >
-                    vmag
-                </th>
-                <td
-                    mat-cell
-                    *matCellDef="let element"
-                >
-                    {{element.vmag}}
-                </td>
-            </ng-container>
-
-            <!-- rh Column -->
-            <ng-container matColumnDef="rh">
-                <th
-                    mat-header-cell
-                    *matHeaderCellDef
-                >
-                    rh
-                </th>
-                <td
-                    mat-cell
-                    *matCellDef="let element"
-                >
-                    {{element.rh}}
-                </td>
-            </ng-container>
-
-            <!-- rdot Column -->
-            <ng-container matColumnDef="rdot">
-                <th
-                    mat-header-cell
-                    *matHeaderCellDef
-                >
-                    rdot
-                </th>
-                <td
-                    mat-cell
-                    *matCellDef="let element"
-                >
-                    {{element.rdot}}
-                </td>
-            </ng-container>
+            </span>
 
             <tbody>
                 <tr

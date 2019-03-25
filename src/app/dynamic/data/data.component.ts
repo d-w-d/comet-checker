@@ -24,13 +24,13 @@ export class DataComponent implements OnInit, AfterViewInit {
     'dec3sig',
     'vmag',
     'rh',
-    'rdot'
-    // 'delta',
-    // 'phase',
-    // 'selong',
-    // 'sangle',
-    // 'vangle',
-    // 'trueanomaly'
+    'rdot',
+    'delta',
+    'phase',
+    'selong',
+    'sangle',
+    'vangle',
+    'trueanomaly'
   ];
 
   ngOnInit() {}
