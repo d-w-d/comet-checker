@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { Home1Component } from './home1/home1.component';
 import { Home2Component } from './home2/home2.component';
+import { TestTableComponent } from './test-table/test-table.component';
 import { HttpClient } from '@angular/common/http';
 
 //ngx-markdown setup (following https://github.com/jfcere/ngx-markdown)
@@ -40,6 +41,6 @@ export function markedOptions(): MarkedOptions {
       }
     })
   ],
-  declarations: [AboutComponent, HomeComponent, Home1Component, Home2Component]
+  declarations: [AboutComponent, HomeComponent, Home1Component, Home2Component, TestTableComponent]
 })
 export class StaticModule {}

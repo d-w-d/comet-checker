@@ -8,6 +8,7 @@ import { HomeComponent, AboutComponent } from './static';
 import { DataComponent } from './dynamic/data/data.component';
 import { Home1Component } from './static/home1/home1.component';
 import { Home2Component } from './static/home2/home2.component';
+import { TestTableComponent } from './static/test-table/test-table.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'data',
     component: DataComponent
+  },
+  {
+    path: 'testtable',
+    component: TestTableComponent
   },
   {
     path: '**',

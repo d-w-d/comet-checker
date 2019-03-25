@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit, ViewChild, OnChanges } from '@angular/core';
 import { ZtfDataService } from '@app/oort/ztf-data.service';
 import { IMOSData } from '@app/oort/ztf-data.model';
 import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
@@ -8,7 +8,6 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
   selector: 'cccc-data',
   templateUrl: './data.component.html',
   styleUrls: ['./data.component.scss']
-  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DataComponent implements OnInit, AfterViewInit {
   //
@@ -21,7 +20,7 @@ export class DataComponent implements OnInit, AfterViewInit {
   // data: IMOSData | null = null;
   // data: any = null;
 
-  data: MatTableDataSource<IMOSData> | null = null;
+  data: MatTableDataSource<IMOSData>;
 
   shownCols: string[] = [
     //
@@ -48,21 +47,20 @@ export class DataComponent implements OnInit, AfterViewInit {
 
   allColumns: string[] = this.shownCols.concat(this.hiddenCols);
 
-  constructor(private ztfData: ZtfDataService) {
-    //
-  }
+  constructor(private ztfData: ZtfDataService) {}
 
-  ngOnInit() {
-    // this.data.paginator = this.paginator;
-    // this.data.sort = this.sort;
-  }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     this.ztfData.getOortData().subscribe(
       (data: IMOSData[]) => {
         this.data = new MatTableDataSource(data);
+
+        // Be careful! paginator and sort elements will be undefined until data is not-null and the table is then rendered!
         this.data.paginator = this.paginator;
         this.data.sort = this.sort;
+        console.log('paginator', this.paginator);
+        console.log('sort', this.sort);
       },
       err => {
         console.log('Error:' + JSON.stringify(err));
@@ -71,6 +69,10 @@ export class DataComponent implements OnInit, AfterViewInit {
     );
   }
 
+  /**
+   * Click buttons to toggle columns included/excluded
+   * @param col: column name to be added/removed
+   */
   addRemoveCols(col: string) {
     if (this.shownCols.includes(col) && this.shownCols.length > 1) {
       // Remove column

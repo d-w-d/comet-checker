@@ -21,8 +21,8 @@ export class NavService {
       icon: 'home'
     },
     {
-      label: 'HomeV2',
-      link: 'home2',
+      label: 'TT',
+      link: 'testtable',
       icon: 'home'
     },
     {
