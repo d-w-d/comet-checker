@@ -1,7 +1,8 @@
-import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit, ViewChild } from '@angular/core';
 import { ZtfDataService } from '@app/oort/ztf-data.service';
 import { IMOSData } from '@app/oort/ztf-data.model';
 import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'cccc-data',
@@ -10,11 +11,17 @@ import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
   // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DataComponent implements OnInit, AfterViewInit {
+  //
+
   routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
 
-  constructor(private ztfData: ZtfDataService) {}
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
-  data: IMOSData | null = null;
+  // data: IMOSData | null = null;
+  // data: any = null;
+
+  data: MatTableDataSource<IMOSData> | null = null;
 
   shownCols: string[] = [
     //
@@ -41,12 +48,21 @@ export class DataComponent implements OnInit, AfterViewInit {
 
   allColumns: string[] = this.shownCols.concat(this.hiddenCols);
 
-  ngOnInit() {}
+  constructor(private ztfData: ZtfDataService) {
+    //
+  }
+
+  ngOnInit() {
+    // this.data.paginator = this.paginator;
+    // this.data.sort = this.sort;
+  }
 
   ngAfterViewInit() {
     this.ztfData.getOortData().subscribe(
-      (data: any) => {
-        this.data = data;
+      (data: IMOSData[]) => {
+        this.data = new MatTableDataSource(data);
+        this.data.paginator = this.paginator;
+        this.data.sort = this.sort;
       },
       err => {
         console.log('Error:' + JSON.stringify(err));
@@ -66,6 +82,14 @@ export class DataComponent implements OnInit, AfterViewInit {
       // Add column and order shown cols by button order
       this.shownCols.push(col);
       this.shownCols = this.shownCols.sort((a, b) => this.allColumns.indexOf(a) - this.allColumns.indexOf(b));
+    }
+  }
+
+  applyFilter(filterValue: string) {
+    this.data.filter = filterValue.trim().toLowerCase();
+
+    if (!!this.data.paginator) {
+      this.data.paginator.firstPage();
     }
   }
 }

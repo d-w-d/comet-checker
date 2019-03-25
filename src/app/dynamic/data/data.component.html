@@ -33,42 +33,59 @@
 
         <hr class="local-hr">
 
-        <table
-            mat-table
-            [dataSource]="data"
-            class="mat-elevation-z8 data-table"
-            color='accent'
-        >
-            <!-- <span *ngFor="let item of navItems; let i = index"> -->
-            <span *ngFor="let colx of shownCols; let j = index">
-                <ng-container [matColumnDef]="colx">
-                    <th
-                        mat-header-cell
-                        *matHeaderCellDef
-                    >
-                        {{colx}}
-                    </th>
-                    <td
-                        mat-cell
-                        *matCellDef="let element"
-                    >
-                        {{element[colx]}}
-                    </td>
-                </ng-container>
+        <mat-form-field>
+            <input
+                matInput
+                (keyup)="applyFilter($event.target.value)"
+                placeholder="Filter"
+                class="filter-field"
+            >
+        </mat-form-field>
+        <div class="neo-table-wrapper mat-elevation-z8">
 
-            </span>
+            <table
+                mat-table
+                matSort
+                [dataSource]="data"
+                class="mat-elevation-z8 data-table"
+                color='accent'
+            >
+                <!-- <span *ngFor="let item of navItems; let i = index"> -->
+                <span *ngFor="let colx of shownCols; let j = index">
+                    <ng-container [matColumnDef]="colx">
+                        <th
+                            mat-header-cell
+                            *matHeaderCellDef
+                            mat-sort-header
+                        >
+                            {{colx}}
+                        </th>
+                        <td
+                            mat-cell
+                            *matCellDef="let element"
+                        >
+                            {{element[colx]}}
+                        </td>
+                    </ng-container>
 
-            <tbody>
-                <tr
-                    mat-header-row
-                    *matHeaderRowDef="shownCols"
-                ></tr>
-                <tr
-                    mat-row
-                    *matRowDef="let row; columns: shownCols;"
-                ></tr>
-            </tbody>
-        </table>
+                </span>
+
+                <!-- <tbody> -->
+                <tbody>
+                    <tr
+                        mat-header-row
+                        *matHeaderRowDef="shownCols"
+                    ></tr>
+                    <tr
+                        mat-row
+                        *matRowDef="let row; columns: shownCols;"
+                    ></tr>
+                    <!-- </tbody> -->
+                </tbody>
+            </table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+        </div>
+
     </div>
 
 </div>
