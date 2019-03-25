@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { ZtfDataService } from '@app/oort/ztf-data.service';
 import { IMOSData } from '@app/oort/ztf-data.model';
 import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
@@ -12,8 +12,20 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 export class DataComponent implements OnInit, AfterViewInit {
   routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  /**
+   * These viewchild setters will be called whenever the corresponding component is rendered
+   */
+  private paginator: MatPaginator;
+  @ViewChild(MatPaginator) set setPaginator(content: MatPaginator) {
+    this.paginator = content;
+    if (!!this.data) this.data.paginator = this.paginator;
+  }
+
+  private sort: MatSort;
+  @ViewChild(MatSort) set setSort(content: MatSort) {
+    this.sort = content;
+    if (!!this.data) this.data.sort = this.sort;
+  }
 
   data: MatTableDataSource<IMOSData>;
 
@@ -42,7 +54,7 @@ export class DataComponent implements OnInit, AfterViewInit {
 
   allColumns: string[] = this.shownCols.concat(this.hiddenCols);
 
-  pageSizeOptions = [5, 10, 25];
+  pageSizeOptions = [5, 10, 25, 100];
 
   constructor(private ztfData: ZtfDataService) {}
 
@@ -59,8 +71,8 @@ export class DataComponent implements OnInit, AfterViewInit {
         }
         //
         this.data = new MatTableDataSource(data);
-        this.data.paginator = this.paginator;
-        this.data.sort = this.sort;
+        // this.data.paginator = this.paginator;
+        // this.data.sort = this.sort;
       },
       err => {
         console.log('Error:' + JSON.stringify(err));
