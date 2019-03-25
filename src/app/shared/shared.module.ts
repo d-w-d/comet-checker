@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
+// import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatChipsModule } from '@angular/material/chips';
@@ -21,7 +22,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatSliderModule } from '@angular/material/';
+import { MatSliderModule, MatTableModule } from '@angular/material/';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 
@@ -106,6 +107,7 @@ import { BigInputActionComponent } from './big-input/big-input-action.component'
     MatToolbarModule,
     MatSelectModule,
     MatTabsModule,
+    MatTableModule,
     MatInputModule,
     MatProgressSpinnerModule,
     MatChipsModule,
@@ -131,6 +133,7 @@ import { BigInputActionComponent } from './big-input/big-input-action.component'
     MatButtonModule,
     MatMenuModule,
     MatTabsModule,
+    MatTableModule,
     MatChipsModule,
     MatInputModule,
     MatProgressSpinnerModule,

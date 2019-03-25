@@ -1,7 +1,126 @@
 <div class="data-page-wrapper">
 
-    <h1 class="main-heading">Data Will Appear Here Very Soon!</h1>
+    <h1
+        *ngIf="!data"
+        class="main-heading"
+    >
+        Data Will Appear Here Very Soon!
+    </h1>
 
-    <div>{{ data }}</div>
+    <div *ngIf="!!data">
+        <table
+            mat-table
+            [dataSource]="data"
+            class="mat-elevation-z8"
+        >
+
+            <!-- obsjd Column -->
+            <ng-container matColumnDef="obsjd">
+                <th
+                    mat-header-cell
+                    *matHeaderCellDef
+                >
+                    obsjd
+                </th>
+                <td
+                    mat-cell
+                    *matCellDef="let element"
+                >
+                    {{element.obsjd}}
+                </td>
+            </ng-container>
+
+            <!-- ra Column -->
+            <ng-container matColumnDef="ra">
+                <th
+                    mat-header-cell
+                    *matHeaderCellDef
+                >
+                    ra
+                </th>
+                <td
+                    mat-cell
+                    *matCellDef="let element"
+                >
+                    {{element.ra}}
+                </td>
+            </ng-container>
+
+            <!-- dec Column -->
+            <ng-container matColumnDef="dec">
+                <th
+                    mat-header-cell
+                    *matHeaderCellDef
+                >
+                    dec
+                </th>
+                <td
+                    mat-cell
+                    *matCellDef="let element"
+                >
+                    {{element.dec}}
+                </td>
+            </ng-container>
+
+            <!-- dra Column -->
+            <ng-container matColumnDef="dra">
+                <th
+                    mat-header-cell
+                    *matHeaderCellDef
+                >
+                    dra
+                </th>
+                <td
+                    mat-cell
+                    *matCellDef="let element"
+                >
+                    {{element.dra}}
+                </td>
+            </ng-container>
+
+            <!-- ddec Column -->
+            <ng-container matColumnDef="ddec">
+                <th
+                    mat-header-cell
+                    *matHeaderCellDef
+                >
+                    ddec
+                </th>
+                <td
+                    mat-cell
+                    *matCellDef="let element"
+                >
+                    {{element.ddec}}
+                </td>
+            </ng-container>
+
+            <!-- ra3sig Column -->
+            <ng-container matColumnDef="ra3sig">
+                <th
+                    mat-header-cell
+                    *matHeaderCellDef
+                >
+                    ra3sig
+                </th>
+                <td
+                    mat-cell
+                    *matCellDef="let element"
+                >
+                    {{element.ra3sig}}
+                </td>
+            </ng-container>
+
+            <tbody>
+                <tr
+                    mat-header-row
+                    *matHeaderRowDef="displayedColumnsOrder"
+                ></tr>
+                <tr
+                    mat-row
+                    *matRowDef="let row; columns: displayedColumnsOrder;"
+                ></tr>
+            </tbody>
+        </table>
+    </div>
 
 </div>

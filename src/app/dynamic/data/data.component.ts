@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit } from '@angular/core';
 import { ZtfDataService } from '@app/oort/ztf-data.service';
+import { IMOSData } from '@app/oort/ztf-data.model';
 
 @Component({
   selector: 'cccc-data',
@@ -10,7 +11,27 @@ import { ZtfDataService } from '@app/oort/ztf-data.service';
 export class DataComponent implements OnInit, AfterViewInit {
   constructor(private ztfData: ZtfDataService) {}
 
-  data: any = '???';
+  data: IMOSData | null = null;
+
+  displayedColumnsOrder: string[] = [
+    //
+    'obsjd',
+    'ra',
+    'dec',
+    'dra',
+    'ddec',
+    'ra3sig'
+    // 'dec3sig',
+    // 'vmag',
+    // 'rh',
+    // 'rdot',
+    // 'delta',
+    // 'phase',
+    // 'selong',
+    // 'sangle',
+    // 'vangle',
+    // 'trueanomaly'
+  ];
 
   ngOnInit() {}
 
@@ -21,7 +42,7 @@ export class DataComponent implements OnInit, AfterViewInit {
       },
       err => {
         console.log('Error:' + JSON.stringify(err));
-        this.data = 'An error occurred';
+        this.data = null;
       }
     );
   }
