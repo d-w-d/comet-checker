@@ -1,6 +1,7 @@
 import { initialState, settingsReducer } from './settings.reducer';
 
 import {
+  //
   ActionSettingsChangeAnimationsElements,
   ActionSettingsChangeAnimationsPage,
   ActionSettingsChangeAnimationsPageDisabled,
@@ -40,7 +41,7 @@ describe('SettingsReducer', () => {
 
   it('should update pageAnimationsDisabled and pageAnimations', () => {
     const action = new ActionSettingsChangeAnimationsPageDisabled({
-      pageAnimationsDisabled: true
+      pageAnimationsDisabled: !true
     });
     const state = settingsReducer(undefined, action);
     expect(state.pageAnimationsDisabled).toEqual(true);
