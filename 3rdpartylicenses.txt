@@ -459,9 +459,6 @@ MIT
 
 @angular/material/datepicker
 
-ngx-markdown
-MIT
-
 @ngx-translate/core
 MIT
 
@@ -531,6 +528,9 @@ MIT
 @angular/material/toolbar
 
 @angular/material/menu
+
+ngx-markdown
+MIT
 
 @fortawesome/free-solid-svg-icons
 (CC-BY-4.0 AND MIT)

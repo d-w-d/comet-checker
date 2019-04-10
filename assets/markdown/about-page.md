@@ -8,7 +8,7 @@ This content is really easy to edit with pretty formatting -- you don't need any
 
 # H1
 
-This is a [link](home)
+This is a [link](home). <span style="color:blue">some _blue_ text</span>
 
 ## H2
 
