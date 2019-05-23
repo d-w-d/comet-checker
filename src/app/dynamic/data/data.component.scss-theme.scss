@@ -7,7 +7,7 @@
   $background: map-get($theme, background);
 
   cccc-data {
-    // Make table transparent; color is provided by table
+    // Make  table transparent; color is provided by table
     .table-wrapper {
       background-color: rgba(mat-color($background, background), 0.9);
       // background-color: rgba(mat-color($background, background), 1);
